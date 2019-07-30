@@ -23,21 +23,21 @@ body{
 }
 
 .logo {
-    width: 17em;
+    width: 10em;
     margin: auto;
     position: absolute;
     top: 20; left: 0; right: 0;
 }
 
 .banner {
-    height: 12em;
+    height: 7em;
     background-color: rgba(255, 255, 255, 0.8);
 }
 
 .banner2 {
-    height: 4em;
+    height: 3em;
     background-color: rgba(202, 182, 156, 0.5);
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 
@@ -49,14 +49,21 @@ body{
     height: 50%; */
     margin: auto;
     display: flex;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;  
+    perspective: 1000px;  
 }
 
 .card {
-    width: calc(33% - 20px);
-    padding-bottom: calc(33% - 20px);
+    width: calc(50% - 10px);
+    padding-bottom: calc(50% - 10px);
     position: relative;
-    margin: 10px;
+    margin: 5px;
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+.card.flip {
+    transform: rotateY(180deg);
 }
 
 .front,
@@ -64,14 +71,17 @@ body{
     width: 100%;
     height: 100%;
     position: absolute;
-    
+    backface-visibility: hidden;
 } 
+
+.front {
+    transform: rotateY(180deg);
+}
 
 
 /* FOOTER */
 
 footer {
-    position: absolute;
     bottom: 0;
     width: 100%;
     height: 2.5rem; 
@@ -82,5 +92,24 @@ footer {
     #game {
         width: 50%;
         height: 50%;  
+    }
+    .card {
+        width: calc(33% - 20px);
+        padding-bottom: calc(33% - 20px);
+        margin: 10px;
+    }
+    footer {
+        position: absolute;
+    }
+    .logo {
+        width: 17em;
+    }
+    
+    .banner {
+        height: 12em;
+    }
+    
+    .banner2 {
+        height: 4em;
     }
 }
