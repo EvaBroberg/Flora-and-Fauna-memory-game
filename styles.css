@@ -1,7 +1,7 @@
 *{
     padding: 0;
     margin: 0;
-    font-family: 'Lora', serif;
+    font-family: 'Cinzel', serif;
 }
 
 body{
@@ -22,6 +22,60 @@ body{
 .top-design {
     
 }
+/*Start game*/
+#login{
+    background-color: #f2e7c7;
+    min-height: 100%;
+    min-width: 100%;
+    height: auto;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.login-logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    margin-top: 7em;
+    
+}
+
+.pickname{
+    color: #888d53;
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.signin > input {
+    padding-top: 2em;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid#888d53; 
+    text-align: center;
+}
+
+.start{
+    color: #888d53;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: transparent;
+    border: 1px solid #888d53;
+    outline: 0;
+    margin-top: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.start:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
 
 /*Timer*/
 .timer {
@@ -31,7 +85,7 @@ body{
     float: right;
     margin-right: 1em;
     color: #98a24c;
-    }
+}
 
 
 .logo {

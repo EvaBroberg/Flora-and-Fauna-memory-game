@@ -63,11 +63,23 @@ cards.forEach(card => card.addEventListener('click', flipCard));
 
 //timer
 
+// let time = 0;
+// let countUp = setInterval(function(){
+// ++time;
+// document.getElementById("count").innerHTML = time;
+// }, 600);
+
 let time = 0;
 let countUp = setInterval(function(){
-++time;
-document.getElementById("count").innerHTML = time;
+  if(hasFlippedCard){
+    ++time;
+  document.getElementById("count").innerHTML = time;
+  }
 }, 600);
+
+
+
+
 
 
 
