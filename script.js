@@ -1,3 +1,21 @@
+//first page and require username
+
+const startGame = document.querySelector('.start');
+const login = document.querySelector('#login');
+const form = document.querySelector('form');
+
+function hide(){
+  // document.getElementById("login").className = "hide";
+  if(form.userid.value.length !== 0){
+    document.getElementById("login").className = "hide"
+  }else{
+    console.log('input required')
+  };
+}
+
+startGame.addEventListener('click', hide);
+
+
 //first level
 
 const cards = document.querySelectorAll('.card');

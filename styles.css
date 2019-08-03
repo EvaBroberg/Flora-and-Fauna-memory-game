@@ -23,6 +23,10 @@ body{
     
 }
 /*Start game*/
+.hide{
+    display: none;
+}
+
 #login{
     background-color: #f2e7c7;
     min-height: 100%;
