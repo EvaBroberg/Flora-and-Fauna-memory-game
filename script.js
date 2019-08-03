@@ -1,46 +1,75 @@
+//first level
+
 const cards = document.querySelectorAll('.card');
 
-let flippedCard = false;
+let hasFlippedCard = false;
+let lockBoard = false;
 let firstCard, secondCard;
 
 function flipCard() {
-    this.classList.add('flip');
-    
-    if(!flippedCard) {
-        flippedCard = true;
-        firstCard = this;
-        
-        return;
-    } 
-    flippedCard = false;
-    secondCard = this;
-    
-    checkForMatch(); 
-}
+  if (lockBoard) return;
+  if (this === firstCard) return;
 
+  this.classList.add('flip');
+
+  if (!hasFlippedCard) {
+    hasFlippedCard = true;
+    firstCard = this;
+
+    return;
+  }
+
+  secondCard = this;
+  checkForMatch();
+}
 
 function checkForMatch() {
-    let match = firstCard.dataset.picture === secondCard.dataset.picture;
-    
-    match ? disableCards() : unflipCards();
+  let isMatch = firstCard.dataset.picture === secondCard.dataset.picture;
+
+  isMatch ? disableCards() : unflipCards();
 }
 
-function disableCards(){
-    firstCard.removeEventListener('click', flipCard);
-    secondCard.removeEventListener('click', flipCard);
+function disableCards() {
+  firstCard.removeEventListener('click', flipCard);
+  secondCard.removeEventListener('click', flipCard);
+
+  resetBoard();
 }
 
-function unflipCards(){
-    setTimeout(() => {
-        firstCard.classList.remove('flip');
-        secondCard.classList.remove('flip');
-    }, 800);
+function unflipCards() {
+  lockBoard = true;
+
+  setTimeout(() => {
+    firstCard.classList.remove('flip');
+    secondCard.classList.remove('flip');
+
+    resetBoard();
+  }, 1500);
 }
 
-function resetBoard(){
-    flipCard, lockBoard = [false, false];
-    [firstCard, secondCard] = [null, null];
+function resetBoard() {
+  [hasFlippedCard, lockBoard] = [false, false];
+  [firstCard, secondCard] = [null, null];
 }
+
+(function shuffle() {
+  cards.forEach(card => {
+    let randomPos = Math.floor(Math.random() * 12);
+    card.style.order = randomPos;
+  });
+})();
 
 cards.forEach(card => card.addEventListener('click', flipCard));
+
+//timer
+
+let time = 0;
+let countUp = setInterval(function(){
+++time;
+document.getElementById("count").innerHTML = time;
+}, 600);
+
+
+
+
 

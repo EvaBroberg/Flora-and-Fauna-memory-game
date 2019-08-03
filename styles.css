@@ -1,6 +1,7 @@
 *{
     padding: 0;
     margin: 0;
+    font-family: 'Lora', serif;
 }
 
 body{
@@ -21,6 +22,17 @@ body{
 .top-design {
     
 }
+
+/*Timer*/
+.timer {
+    font-size: 1.2em;
+    padding-top: 0.5em;
+    /* text-align: right; */
+    float: right;
+    margin-right: 1em;
+    color: #98a24c;
+    }
+
 
 .logo {
     width: 10em;
@@ -87,6 +99,8 @@ footer {
     height: 2.5rem; 
     background-color: rgba(202, 182, 156, 0.5);
 }
+
+/*Media queries*/
 
 @media (min-width:1024px) {
     #game {
