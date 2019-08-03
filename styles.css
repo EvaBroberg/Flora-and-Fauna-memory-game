@@ -80,6 +80,46 @@ body{
     background-color: rgba(255, 255, 255, 0.5);
 }
 
+/*Modal*/
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0; top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(88, 88, 88, 0.7);
+}
+
+.modal-content{
+    background-color: #ebeee3;
+    margin: 50% auto;
+    padding: 50px;
+    width: 70%;
+}
+
+.modal-content > p{
+  font-weight: bold;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  color: #888d53;
+}
+
+.closeBtn{
+    font-size: 3em;
+    color: #ebeee3;
+    position: absolute;
+    right: 20px;
+    top: 5px;
+}
+
+.closeBtn:hover, .closeBtn:focus {
+    color: #98a24c;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 
 /*Timer*/
 .timer {

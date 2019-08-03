@@ -4,14 +4,47 @@ const startGame = document.querySelector('.start');
 const login = document.querySelector('#login');
 const form = document.querySelector('form');
 
+const modal = document.getElementById('simpleModal');
+const modalBtn = document.getElementById('modalBtn');
+const closeBtn = document.getElementsByClassName('closeBtn')[0];
+
+
+function openModal(){
+  closeBtn.addEventListener('click', closeModal);
+  window.addEventListener('click', closeOutside);
+  modal.style.display = 'block';
+}
+
+function closeModal(){
+  modal.style.display = 'none';
+}
+
+function closeOutside(e){
+  if(e.target == modal){
+    modal.style.display = 'none';
+  }
+}
+
+
+
 function hide(){
   // document.getElementById("login").className = "hide";
   if(form.userid.value.length !== 0){
     document.getElementById("login").className = "hide"
   }else{
-    console.log('input required')
+    openModal();
   };
 }
+
+
+
+
+
+
+
+
+
+
 
 startGame.addEventListener('click', hide);
 
