@@ -8,6 +8,8 @@ const modal = document.getElementById('simpleModal');
 const modalBtn = document.getElementById('modalBtn');
 const closeBtn = document.getElementsByClassName('closeBtn')[0];
 
+let turns = 0;
+
 
 function openModal(){
   closeBtn.addEventListener('click', closeModal);
@@ -25,33 +27,23 @@ function closeOutside(e){
   }
 }
 
-
+startGame.addEventListener('click', hide);
 
 function hide(){
   // document.getElementById("login").className = "hide";
   if(form.userid.value.length !== 0){
-    document.getElementById("login").className = "hide"
+    document.getElementById("login").className = "hide";
+    username = document.getElementById('username').value;
+    document.getElementById('player').innerHTML = 'Name: ' + username;
   }else{
     openModal();
   };
 }
 
-
-
-
-
-
-
-
-
-
-
-startGame.addEventListener('click', hide);
-
-
 //first level
 
 const cards = document.querySelectorAll('.card');
+// document.getElementById('user_name').value = 'Name: ' + username;
 
 let hasFlippedCard = false;
 let lockBoard = false;
@@ -83,11 +75,20 @@ function checkForMatch() {
 function disableCards() {
   firstCard.removeEventListener('click', flipCard);
   secondCard.removeEventListener('click', flipCard);
-
   resetBoard();
 }
 
 function unflipCards() {
+  //
+  if(turns < 10){
+    turns += 1;
+  }else{
+    document.getElementById("gameover").style.display = "block";
+    // console.log('game over');
+  }
+  //
+  // turns += 1;
+  document.getElementById('turns').innerText = 'Total: ' + turns;
   lockBoard = true;
 
   setTimeout(() => {
@@ -97,6 +98,15 @@ function unflipCards() {
     resetBoard();
   }, 1500);
 }
+
+//??
+function gameover(){
+  if(turns === 3){
+    console.log('you lost');
+  };
+} 
+
+//??
 
 function resetBoard() {
   [hasFlippedCard, lockBoard] = [false, false];

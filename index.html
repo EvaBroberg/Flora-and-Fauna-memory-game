@@ -10,12 +10,17 @@
 <body>
     
     <div class="main-wrapper">
+        <!-- Oh no! Try Again -->
+        <div id="gameover">
+            <h1>You lost!</h1>
+            <button>Try again</button>
+        </div>
         <!-- start game -->
         <div id="login">
             <img src="imageAssets\logo.png" alt="logo of the page" class="login-logo">
             <form class="signin">
                 <p class="pickname">Pick a Name:</p>
-                <input type="text" name="userid">
+                <input type="text" name="userid" id="username">
             </form>
             <button id="modalBtn" class="start">START THE GAME!</button>
             <div id="simpleModal" class="modal">
@@ -30,10 +35,15 @@
             <img src="imageAssets\logo.png" alt="logo of the page" class="logo">
             <div class="banner"></div>
             <div class="banner2">
-                <p class="timer">Time: <span id="count"></span></p>     
+                <p class="timer">Time: <span id="count"></span></p>    
                 <!-- <p id="count"></p> -->
             </div>
         </div>
+    </div>
+    
+    <div>
+        <p id="player">Name: </p>
+        <p id="turns">Turns: </p>
     </div>
     
     
