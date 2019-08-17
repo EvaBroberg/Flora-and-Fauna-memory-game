@@ -47,7 +47,6 @@ body{
     margin-right: auto;
     width: 60%;
     margin-top: 7em;
-    
 }
 
 .pickname{
@@ -221,8 +220,8 @@ footer {
 
 @media (min-width:1024px) {
     #game {
-        width: 50%;
-        height: 50%;  
+        width: 45%;
+        height: 45%;  
     }
     .card {
         width: calc(33% - 20px);
@@ -232,6 +231,10 @@ footer {
     footer {
         position: absolute;
     }
+    .login-logo{
+        width: 20%;
+    }
+
     .logo {
         width: 17em;
     }

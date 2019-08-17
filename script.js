@@ -1,14 +1,39 @@
-//first page and require username
-
 const startGame = document.querySelector('.start');
 const login = document.querySelector('#login');
 const form = document.querySelector('form');
-
 const modal = document.getElementById('simpleModal');
 const modalBtn = document.getElementById('modalBtn');
 const closeBtn = document.getElementsByClassName('closeBtn')[0];
+const cards = document.querySelectorAll('.card');
 
+let hasFlippedCard = false;
+let lockBoard = false;
+let firstCard, secondCard;
 let turns = 0;
+let mySound;
+
+//sounds
+
+function sound(src) {
+  this.sound = document.createElement("audio");
+  this.sound.src = src;
+  this.sound.setAttribute("preload", "auto");
+  this.sound.setAttribute("controls", "none");
+  this.sound.style.display = "none";
+  document.body.appendChild(this.sound);
+  this.play = function(){
+    this.sound.play();
+  }
+  this.stop = function(){
+    this.sound.pause();
+  }
+}
+
+if(hasFlippedCard === true){
+  mySound = new sound("card-flip.wav");
+}
+
+
 
 
 function openModal(){
@@ -30,14 +55,11 @@ function closeOutside(e){
 startGame.addEventListener('click', hide);
 
 login.addEventListener('submit', e => {
-    e.preventDefault();
-    hide();
-  });
-  
-  
-  
-  
-  function hide(){
+  e.preventDefault();
+  hide();
+});
+
+function hide(){
     // document.getElementById("login").className = "hide";
     if(form.userid.value.length !== 0){
       document.getElementById("login").className = "hide";
@@ -48,28 +70,15 @@ login.addEventListener('submit', e => {
     };
   }
   
-  //first level
-  
-  const cards = document.querySelectorAll('.card');
-  // document.getElementById('user_name').value = 'Name: ' + username;
-  
-  let hasFlippedCard = false;
-  let lockBoard = false;
-  let firstCard, secondCard;
-  
   function flipCard() {
     if (lockBoard) return;
     if (this === firstCard) return;
-    
     this.classList.add('flip');
-    
     if (!hasFlippedCard) {
       hasFlippedCard = true;
       firstCard = this;
-      
       return;
     }
-    
     secondCard = this;
     checkForMatch();
   }
@@ -129,29 +138,13 @@ login.addEventListener('submit', e => {
   })();
   
   cards.forEach(card => card.addEventListener('click', flipCard));
-  
-  //timer
-  
-  // let time = 0;
-  // let countUp = setInterval(function(){
-  // ++time;
-  // document.getElementById("count").innerHTML = time;
-  // }, 600);
+
   
   let time = 0;
   let countUp = setInterval(function(){
     if(hasFlippedCard){
       ++time;
-      document.getElementById("count").innerHTML = time;
+      //document.getElementById("count").innerHTML = time;
     }
   }, 600);
-  
-  
-  
-  
-  
-  
-  
-  
-  
   
