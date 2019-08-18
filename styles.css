@@ -83,12 +83,45 @@ body{
 
 /*Game over*/
 #gameover {
-    position: absolute;
+    position: fixed;
+    background-color: #f2e7c7;
     width: 100%;
     height: 100%;
-    background-color: #888d53;
     z-index: 2;
     display: none;
+    
+}
+
+#gameover h1 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    color: #98a24c;
+}
+
+#tryAgain {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    text-align: center;
+    font-size: 25px;
+    background-color: #98a24c;
+    border: solid 1px #98a24c;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    color: #f2e7c7;
+}
+
+#tryAgain:hover{
+    background-color: #888d53;
+    cursor: pointer;
 }
 
 /*Modal*/
@@ -111,10 +144,10 @@ body{
 }
 
 .modal-content > p{
-  font-weight: bold;
-  font-size: 1.2em;
-  letter-spacing: 2px;
-  color: #888d53;
+    font-weight: bold;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    color: #888d53;
 }
 
 .closeBtn{
@@ -182,7 +215,7 @@ body{
     margin-top: 13px;
     color: darkolivegreen;
     font-weight: 600;
-   
+    
 }
 
 #time-remaining {
@@ -259,7 +292,7 @@ footer {
     .login-logo{
         width: 20%;
     }
-
+    
     .logo {
         width: 17em;
     }
@@ -271,16 +304,24 @@ footer {
     .banner2 {
         height: 4em;
     }
-
+    
     #turns { 
+        margin-top: 13px;
         display: inline-block;
-        margin-top: 40px;
-       
+        font-size: 15px;
     }
     
     #time-remaining {
         display: inline-block;
         margin-right: 500px;
+        font-size: 15px;
+    }
+
+    #tryAgain {
+        height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 1px solid #98a24c;
         
     }
 }

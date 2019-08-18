@@ -1,4 +1,5 @@
 const startGame = document.querySelector('.start');
+const game = document.querySelector('.game');
 const login = document.querySelector('#login');
 const form = document.querySelector('form');
 const modal = document.getElementById('simpleModal');
@@ -13,7 +14,8 @@ let mySound;
 const soundForCardFlip = new Audio('sounds/card-flip.wav');
 const soundForCardsMatch = new Audio('sounds/match.mp3');
 const soundForNoMatchingCard = new Audio('sounds/no-match.wav');
-//sounds
+const bgMusic = new Audio('sounds/bg.mp3');
+
 function sound(src) {
   this.sound = document.createElement("audio");
   this.sound.src = src;
@@ -22,15 +24,13 @@ function sound(src) {
   this.sound.style.display = "none";
   document.body.appendChild(this.sound);
   this.play = function(){
-    this.sound.play();
+  this.sound.play();
   }
   this.stop = function(){
     this.sound.pause();
   }
 }
-function playSoundForCardFlip() {
-  mySound = new sound("sounds/card-flip.wav");
-}
+
 function openModal(){
   closeBtn.addEventListener('click', closeModal);
   window.addEventListener('click', closeOutside);
@@ -46,6 +46,7 @@ function closeOutside(e){
 }
 startGame.addEventListener('click', hide);
 login.addEventListener('submit', e => {
+  bgMusic.play();
   e.preventDefault();
   hide();
 });
@@ -130,29 +131,6 @@ function hide(){
       ++time;
     }
   }, 600);
-  
-//timer 
-
-// function startTimer(duration, display) {
-//   var timer = duration, seconds;
-//   setInterval(function () {
-//       seconds = parseInt(timer);
-
-//       seconds = seconds < 10 ? "0" + seconds : seconds;
-
-//       display.textContent = 'Time: ' + seconds;
-
-//       if (--timer < 0) {
-//           timer = duration;
-//       }
-//   }, 1000);
-// }
-
-// window.onload = function () {
-//   var timeLimit = 100,
-//       display = document.querySelector('#time-remaining');
-//   startTimer(timeLimit, display);
-// };
 
 
 function startTimer(duration, display) {
@@ -175,5 +153,11 @@ window.onload = function () {
       display = document.querySelector('#time-remaining');
   startTimer(timeLimit, display);
 };
+
+document.getElementById("tryAgain").addEventListener("click", function(){
+  document.location.reload();
+});
+
+
 
 
