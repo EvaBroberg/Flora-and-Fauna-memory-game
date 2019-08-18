@@ -139,8 +139,20 @@ body{
     color: #98a24c;
 }
 
-#player {
+.player {
     text-align: center;
+}
+
+#player {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 7px 80px;
+    margin: 10px 0;
+    color: #888d53;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 
@@ -148,7 +160,7 @@ body{
     width: 10em;
     margin: auto;
     position: absolute;
-    top: 20; left: 0; right: 0;
+    top: 10; left: 0; right: 0;
 }
 
 .banner {
@@ -157,21 +169,28 @@ body{
 }
 
 .banner2 {
-    display: flex;
-    flex-direction: row-reverse;
     height: 3em;
     background-color: rgba(202, 182, 156, 0.5);
-    margin-bottom: 1em;
-    font-size: 30px;
+    margin-bottom: 0.3em;
+    font-size: 15px;
     font-weight: 500;
+    text-align: center;
 }
 
 #turns { 
-  
+    display: inline-block;
+    margin-top: 13px;
+    color: darkolivegreen;
+    font-weight: 600;
+   
 }
 
 #time-remaining {
-    align-self: flex-end;
+    display: inline-block;
+    margin-right: 180px;
+    color: darkolivegreen;
+    font-weight: 600;
+    
 }
 
 
@@ -251,5 +270,17 @@ footer {
     
     .banner2 {
         height: 4em;
+    }
+
+    #turns { 
+        display: inline-block;
+        margin-top: 40px;
+       
+    }
+    
+    #time-remaining {
+        display: inline-block;
+        margin-right: 500px;
+        
     }
 }

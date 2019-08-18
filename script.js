@@ -54,7 +54,7 @@ function hide(){
     if(form.userid.value.length !== 0){
       document.getElementById("login").className = "hide";
       username = document.getElementById('username').value;
-      document.getElementById('player').innerHTML = 'Name: ' + username;
+      document.getElementById('player').innerHTML = 'Good luck ' + username + '!';
     }else{
       openModal();
     };
@@ -97,11 +97,9 @@ function hide(){
       turns += 1;
     }else{
       document.getElementById("gameover").style.display = "block";
-      // console.log('game over');
     }
-    //
-    // turns += 1;
-    document.getElementById('turns').innerText = 'Total: ' + turns;
+    
+    document.getElementById('turns').innerText = 'Flips: ' + turns;
     lockBoard = true;
     
     setTimeout(() => {
@@ -109,7 +107,7 @@ function hide(){
       secondCard.classList.remove('flip');
       
       resetBoard();
-    }, 1500);
+    }, 1100);
   }
   
   function resetBoard() {
@@ -133,3 +131,49 @@ function hide(){
     }
   }, 600);
   
+//timer 
+
+// function startTimer(duration, display) {
+//   var timer = duration, seconds;
+//   setInterval(function () {
+//       seconds = parseInt(timer);
+
+//       seconds = seconds < 10 ? "0" + seconds : seconds;
+
+//       display.textContent = 'Time: ' + seconds;
+
+//       if (--timer < 0) {
+//           timer = duration;
+//       }
+//   }, 1000);
+// }
+
+// window.onload = function () {
+//   var timeLimit = 100,
+//       display = document.querySelector('#time-remaining');
+//   startTimer(timeLimit, display);
+// };
+
+
+function startTimer(duration, display) {
+  var timer = duration, seconds;
+  setInterval(function () {
+      seconds = parseInt(timer);
+
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+
+      display.textContent = 'Time: ' + seconds;
+
+      if (--timer < 0) {
+          document.getElementById("gameover").style.display = "block";
+      }
+  }, 1000);
+}
+
+window.onload = function () {
+  var timeLimit = 20,
+      display = document.querySelector('#time-remaining');
+  startTimer(timeLimit, display);
+};
+
+
