@@ -132,21 +132,15 @@ body{
 }
 
 
-/*Timer*/
-.timer {
-    font-size: 1.2em;
-    padding-top: 0.5em;
-    /* text-align: right; */
-    float: right;
-    margin-right: 1em;
-    color: #98a24c;
-}
-
 #username {
     font-size: 1.2em;
     padding-top: 0.5em;
     margin-left: 1em;
     color: #98a24c;
+}
+
+#player {
+    text-align: center;
 }
 
 
@@ -163,9 +157,21 @@ body{
 }
 
 .banner2 {
+    display: flex;
+    flex-direction: row-reverse;
     height: 3em;
     background-color: rgba(202, 182, 156, 0.5);
     margin-bottom: 1em;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#turns { 
+  
+}
+
+#time-remaining {
+    align-self: flex-end;
 }
 
 

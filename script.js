@@ -5,15 +5,15 @@ const modal = document.getElementById('simpleModal');
 const modalBtn = document.getElementById('modalBtn');
 const closeBtn = document.getElementsByClassName('closeBtn')[0];
 const cards = document.querySelectorAll('.card');
-
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 let turns = 0;
 let mySound;
-
+const soundForCardFlip = new Audio('sounds/card-flip.wav');
+const soundForCardsMatch = new Audio('sounds/match.mp3');
+const soundForNoMatchingCard = new Audio('sounds/no-match.wav');
 //sounds
-
 function sound(src) {
   this.sound = document.createElement("audio");
   this.sound.src = src;
@@ -28,37 +28,27 @@ function sound(src) {
     this.sound.pause();
   }
 }
-
-if(hasFlippedCard === true){
-  mySound = new sound("card-flip.wav");
+function playSoundForCardFlip() {
+  mySound = new sound("sounds/card-flip.wav");
 }
-
-
-
-
 function openModal(){
   closeBtn.addEventListener('click', closeModal);
   window.addEventListener('click', closeOutside);
   modal.style.display = 'block';
 }
-
 function closeModal(){
   modal.style.display = 'none';
 }
-
 function closeOutside(e){
   if(e.target == modal){
     modal.style.display = 'none';
   }
 }
-
 startGame.addEventListener('click', hide);
-
 login.addEventListener('submit', e => {
   e.preventDefault();
   hide();
 });
-
 function hide(){
     // document.getElementById("login").className = "hide";
     if(form.userid.value.length !== 0){
@@ -72,6 +62,7 @@ function hide(){
   
   function flipCard() {
     if (lockBoard) return;
+    soundForCardFlip.play();
     if (this === firstCard) return;
     this.classList.add('flip');
     if (!hasFlippedCard) {
@@ -85,8 +76,13 @@ function hide(){
   
   function checkForMatch() {
     let isMatch = firstCard.dataset.picture === secondCard.dataset.picture;
-    
-    isMatch ? disableCards() : unflipCards();
+    if (isMatch) {
+      soundForCardsMatch.play();
+      disableCards();
+    } else {
+      unflipCards();
+      soundForNoMatchingCard.play();
+    }
   }
   
   function disableCards() {
@@ -116,15 +112,6 @@ function hide(){
     }, 1500);
   }
   
-  //??
-  function gameover(){
-    if(turns === 3){
-      console.log('you lost');
-    };
-  } 
-  
-  //??
-  
   function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
@@ -138,13 +125,11 @@ function hide(){
   })();
   
   cards.forEach(card => card.addEventListener('click', flipCard));
-
   
   let time = 0;
   let countUp = setInterval(function(){
     if(hasFlippedCard){
       ++time;
-      //document.getElementById("count").innerHTML = time;
     }
   }, 600);
   
