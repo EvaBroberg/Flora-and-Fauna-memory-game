@@ -298,16 +298,26 @@ body{
 }
 
 
-/* 1st LEVEL CARDS */
+/*CARDS */
 
 
-#game {
+/#game {
     /* width: 50%;
     height: 50%; */
     margin: auto;
     display: flex;
     flex-wrap: wrap;  
-    perspective: 1000px;  
+    perspective: 1000px; 
+    display: none;
+} 
+
+
+#game2 {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap; 
+    perspective: 1000px; 
 }
 
 .card {
@@ -318,6 +328,12 @@ body{
     transform-style: preserve-3d;
     transition: transform .5s;
 }
+
+.card2 {
+    flex: 1 0 10%;
+}
+
+
 
 .card.flip {
     transform: rotateY(180deg);
@@ -354,9 +370,14 @@ footer {
     }
     .card {
         width: calc(33% - 20px);
-        padding-bottom: calc(33% - 20px);
+        padding-bottom: calc(16% - 60px);
         margin: 10px;
     }
+
+    .card2 {
+        flex: 1 0 19%;
+    }
+
     footer {
         position: absolute;
     }

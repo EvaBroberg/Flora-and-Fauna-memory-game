@@ -36,7 +36,10 @@ login.addEventListener('submit', e => {
   bgMusic.play();
   e.preventDefault();
   hide();
+  /////////////////////////////////////////////////////////////////////
+  
 });
+
 
 function hide(){
     if(form.userid.value.length !== 0){
@@ -47,7 +50,7 @@ function hide(){
       openModal();
     };
   }
-  
+
   function flipCard() {
     if (lockBoard) return;
     soundForCardFlip.play();
@@ -112,38 +115,40 @@ function hide(){
   
   cards.forEach(card => card.addEventListener('click', flipCard));
   
-  let time = 0;
-  let countUp = setInterval(function(){
-    if(hasFlippedCard){
-      ++time;
-    }
-  }, 600);
 
 
-function startTimer(duration, display) {
-  var timer = duration, seconds;
-  setInterval(function () {
-      seconds = parseInt(timer);
+//   let time = 0;
+//   let countUp = setInterval(function(){
+//     if(hasFlippedCard){
+//       ++time;
+//     }
+//   }, 600);
 
-      seconds = seconds < 10 ? "0" + seconds : seconds;
 
-      display.textContent = 'Time: ' + seconds;
+// function startTimer(duration, display) {
+//   var timer = duration, seconds;
+//   setInterval(function () {
+//       seconds = parseInt(timer);
 
-      if (--timer < 0 && score !== 6) {
-          document.getElementById("gameover").style.display = "block";
-      }
-      if(score === 6){
-        timer = 0;
-        document.getElementById("nextLevel").style.display = "block";
-      }
-  }, 1000);
-}
+//       seconds = seconds < 10 ? "0" + seconds : seconds;
 
-window.onload = function () {
-  var timeLimit = 20,
-      display = document.querySelector('#time-remaining');
-  startTimer(timeLimit, display);
-};
+//       display.textContent = 'Time: ' + seconds;
+
+//       if (--timer < 0 && score !== 6) {
+//           document.getElementById("gameover").style.display = "block";
+//       }
+//       if(score === 6){
+//         timer = 0;
+//         document.getElementById("nextLevel").style.display = "block";
+//       }
+//   }, 1000);
+// }
+
+// window.onload = function () {
+//   var timeLimit = 20,
+//       display = document.querySelector('#time-remaining');
+//   startTimer(timeLimit, display);
+// };
 
 document.getElementById("tryAgain").addEventListener("click", function(){
   document.location.reload();
