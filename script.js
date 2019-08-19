@@ -10,26 +10,13 @@ let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 let turns = 0;
-let mySound;
+let score = 0;
 const soundForCardFlip = new Audio('sounds/card-flip.wav');
 const soundForCardsMatch = new Audio('sounds/match.mp3');
 const soundForNoMatchingCard = new Audio('sounds/no-match.wav');
 const bgMusic = new Audio('sounds/bg.mp3');
-
-function sound(src) {
-  this.sound = document.createElement("audio");
-  this.sound.src = src;
-  this.sound.setAttribute("preload", "auto");
-  this.sound.setAttribute("controls", "none");
-  this.sound.style.display = "none";
-  document.body.appendChild(this.sound);
-  this.play = function(){
-  this.sound.play();
-  }
-  this.stop = function(){
-    this.sound.pause();
-  }
-}
+let nextLevel = document.getElementById('newLevel');
+let playBtn = document.getElementById('play');
 
 function openModal(){
   closeBtn.addEventListener('click', closeModal);
@@ -50,8 +37,8 @@ login.addEventListener('submit', e => {
   e.preventDefault();
   hide();
 });
+
 function hide(){
-    // document.getElementById("login").className = "hide";
     if(form.userid.value.length !== 0){
       document.getElementById("login").className = "hide";
       username = document.getElementById('username').value;
@@ -79,8 +66,9 @@ function hide(){
     let isMatch = firstCard.dataset.picture === secondCard.dataset.picture;
     if (isMatch) {
       soundForCardsMatch.play();
+      score += 2;
       disableCards();
-    } else {
+    }else {
       unflipCards();
       soundForNoMatchingCard.play();
     }
@@ -93,7 +81,6 @@ function hide(){
   }
   
   function unflipCards() {
-    //
     if(turns < 10){
       turns += 1;
     }else{
@@ -142,8 +129,12 @@ function startTimer(duration, display) {
 
       display.textContent = 'Time: ' + seconds;
 
-      if (--timer < 0) {
+      if (--timer < 0 && score !== 6) {
           document.getElementById("gameover").style.display = "block";
+      }
+      if(score === 6){
+        timer = 0;
+        document.getElementById("nextLevel").style.display = "block";
       }
   }, 1000);
 }
@@ -157,6 +148,12 @@ window.onload = function () {
 document.getElementById("tryAgain").addEventListener("click", function(){
   document.location.reload();
 });
+
+//winning
+document.getElementById("playAgain").addEventListener("click", function(){
+  document.location.reload();
+});
+//
 
 
 
