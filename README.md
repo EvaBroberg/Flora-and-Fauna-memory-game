@@ -58,7 +58,7 @@ Once level is passed, pop up identifying the beginning of next level appears mak
 
 <h2>Features</h2>
 
-Game environment is fully responsive allowing user to play on any devices, desktop version fits all the visual information on the screen without scrolling allowing user to see and engage with all the game features. For mobile view 1st level cards are displayed in pairs rather than in threes in attempt to keep card size larger and avoid unecessary white space at the bottom of the screen, as the number of cards increases one card is added to a row in order to keep row count the same there fore same amount of scrolling which allows user to see all the cards and timer at the same time.
+Game environment is fully responsive allowing user to play on any devices, desktop version fits all the visual information on the screen without scrolling allowing user to see and engage with all the game features. For mobile view 1st level cards are displayed in pairs rather than in threes in attempt to keep card size larger and avoid unecessary white space at the bottom of the screen, as the number of cards increases cards get smaller attemting to allow as many rows as needed to try ank keep all the cards visable without scrolling.
 
 i- icon for game instructions and speaker icon is added to the Log in page allowing user to familiarise with a game and decided whether they want sound effects or not before game starts. 
 
@@ -70,4 +70,144 @@ Log in page is imediately displayed once user access game, it overlays all the c
 
 <h2>First Level</h2>
 
-As soon as user enters the game "Good luch 'User's chosen name" is 
+As soon as user enters the game "Good luck 'User's chosen name" is displayed on the screen and timer starts a count down from 60 and a game background music starts playing (unless user had previously disabled it). Player flips first card (every flip of the card has a sound effect), player flips a second card, on the top right flip count increases by 1. If the match is made user hears a match sound and cards stay face up, if cards didn't match no-match sound activated and cards flip back. Users get to try until they either ran out of given time or exceeded a given amount of flips per game. If the game was lost, losing sound activates and overlay anouncing lost game appears covering all content. Under thext "Sorry, you have lost" a big button with text "Try again" is displayed allowing user to reset the game. Every time user starts a new game cards are reshuffled and their position changes. If player has matched all the cards in time given and not exceeded number of flips provided overlay next level appears. It's functionality works similarly to game over overlay as it displays text and the button, the only difference being that the button will lead to a second level rather than restarting the game.
+
+<h2>Second Level</h2>
+
+Once user had clicked "Start next level button" all same features as level one are activated, background music, timer and flip count starts working. More cards are added to the board and the rest of the game is identical to the first level.
+
+<h2>Third Level</h2>
+
+Exactly same as 1st and 2nd levels except even more cards are added to the board and if all cards were matched this time the game is won. "Congratulations You Won" overlay appears and victory sound is played. This overlay has same functionality as game over displaying text and a button to "Play again", only the messaging changes.
+
+<h2>Existing features</h2>
+
+<ul>
+	<li>Log in page conists of form and a submmit button allowing player to choose the name before game starts, which is later displayed on the screen</li>
+	<li>information and sound icons are provided that grows and changes colour when hovered over, allowing user to amend sound affects and read game rules before game starts </li>
+	<li>Timer and flip count is provided throughout all levels of the game, sharing style and functionality</li>
+	<li>Users name with "good luck message" is displayed throughout all levels of the game</li>
+	<li>Set of interactive cards that shares same style properties (increasing in number by level) is provided throughout the game</li>
+	<li>"Next Level", "Game over" and "You won" overlays are activated on each level also consisting of the button encouraging user to restart a game or progress to the next level</li>
+	<li>Same footer is used throughout the game indicating copy right with a year of game creation and an github icon which grows and changes colour when hovered over and on the click leads a user to a github repository where they are able to check out the code behind the game</li>
+</ul>
+
+<h4>Features to improve or create</h4>
+
+<ul>
+	<li>Create a registration form so that user can log in and continue their game where they left off (need to advance in JS)</li>
+	<li>Amend that once user restarts the game they don't have to log in again, their name continues being displayed on the screen(need to advance in JS)</li>
+	<li>Add more levels</li>
+	<li>Add grading system, that remembers users best score at shortest time and least amount of flips there fore it can track personal record and announce when results were improved (need to advance in JS)</li>
+	<li>Add a CSS animation for when game is won (need to advance in CSS)</li>
+</ul>
+
+<h4>Technologies used</h4>
+
+<ul>
+	<li>Game was built using HTML, CSS, vanilla JavaScript and JQueries</li>
+	<li>Code editor Visual Studio Code was used as a development environment</li>
+	<li>Google Fonts were used with text styling purposes</li>
+</ul>
+
+<h2>Testing</h2>
+
+Testing information can be found in separate <a href="">testing.md file</a> 
+
+<h2>Deployment</h2>
+
+This project was developed using the Visual Studio Code IDE, committed to git and pushed to GitHub using Git open source version control system which I have installed to my computer.
+
+Take the following actions in order to view a deployed version of the page:
+
+<ol>
+	<li>Log in to GitHub.</li>
+	<li>Select <b>EvaBroberg/Flora and Fauna</b> from the list of repositories.</li>
+	<li>Select <b>Settings</b> from the navbar near the top of the page.</li>
+	<li>Scroll down to the GitHub Pages section.</li>
+	<li>Under Source click the drop-down menu labeled None and select Master Branch. The page is automatically refreshed and the website is deployed.</li>
+</ol>
+
+
+Take following actions in order to run this project locally:
+
+<ol>
+	<li>Follow this link to the <a href="https://github.com/EvaBroberg/Alabama-Slammers-Responsive-Website-Project">GitHub repository</a></li>
+	<li>Under the repository name, click a green button that says "Clone or download"</li>
+	<li>Copy the clone URL (make sure you have selected clone with HTTP section)</li>
+	<li>In your local workspace open Git Bash</li>
+	<li>Make sure you are inside of the directory where you want the cloned directory to be located.</li>
+	<li>Type git clone and paste the URL copied from GitHub like so:
+
+	<pre><span class="pl-c1">git clone https://github.com/USERNAME/REPOSITORY</span></pre>
+</li>
+</ol>
+
+
+<h2>Credits</h2>
+
+<h4>Content</h4>
+
+<ul>
+	<li>Game was designed, built and executed by Ieva Broberg.</li>
+</ul>
+
+<h4>Media</h4>
+
+<ul>
+	<li>Images used for cards and logo were taken fron free sourcs vintage botanical imagery collection at <a href="#"></a></li>
+	<li>Sounds for the game were taken from <a href="#"></a></li>
+</ul>
+
+<h4>Code</h4>
+
+<h2>In preparation for the game development these educational videos were watched: </h2>
+<ul>
+	<li><a href=""></a></li>
+	<li><a href=""></a></li>
+	<li><a href=""></a></li>
+	<li><a href=""></a></li>
+	<li><a href=""></a></li>
+</ul>
+
+<h2>To get better understanging of JS these external resources were used</h2>
+<ul>
+	<li><a href=""></a></li>
+	<li><a href=""></a></li>
+	<li><a href=""></a></li>
+	<li><a href=""></a></li>
+	<li><a href=""></a></li>
+</ul>
+
+<h2>Acknowledgements</h2>
+
+<ul>
+	<li>Codebar.io coders meer-up group for supporting me on my progress in JS and general advice</li>
+	<li>FreeCodeCamp developers meet-up group for feedback on the project</li>
+	<li>Mentors and fellow students on slack for help around the clock regarding any coding issue</li>
+	<li>Super Thanks to Spencer Barriball for being available whenever I got stuck, helping and motivating me throughout creation of the project.</li>
+</ul>
+
+
+<h2>Disclaimer</h2>
+
+Game was created for educational purpouses only and is not available for profit. I do not hold copy rights of imagery or sound effects.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

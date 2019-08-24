@@ -1,21 +1,21 @@
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <title>Flora and Fauna</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Flora and Fauna</title>
+</head>
 <body>
     
     <div id="wholeGame" class="main-wrapper">
-         <!-- Next Level -->
-         <div id="nextLevel">
+        <!-- Next Level -->
+        <div id="nextLevel">
             <h1>NEXT LEVEL</h1>
             <button id="play">Play</button>
-         </div>
+        </div>
         <!-- Oh no! Try Again -->
         <div id="gameover">
             <h1>You lost!</h1>
@@ -28,12 +28,13 @@
         </div>
         <!-- start game -->
         <div id="login">
-            <img src="imageAssets\logo.png" alt="logo of the page" class="login-logo">
+            <img src="imageAssets\logo2.png" alt="logo of the page" class="login-logo">
             <form class="signin">
                 <p class="pickname">Pick a Name:</p>
                 <input type="text" name="userid" id="username">
+                <button id="modalBtn" class="start">START THE GAME!</button>
             </form>
-            <button id="modalBtn" class="start">START THE GAME!</button>
+            <!-- <button id="modalBtn" class="start">START THE GAME!</button> -->
             <div id="simpleModal" class="modal">
                 <div class="modal-content">
                     <span class="closeBtn">&times;</span>
@@ -46,8 +47,8 @@
             <img src="imageAssets\logo.png" alt="logo of the page" class="logo">
             <div class="banner"></div>
             <div class="banner2">
-                 <span id="time-remaining"> Time: 100</span>
-                 <span id="turns">Flips: 0</span>
+                <span id="time-remaining"> Time: 100</span>
+                <span id="turns">Flips: 0</span>
             </div>
         </div>
     </div>
@@ -56,7 +57,23 @@
     </div>
     
     
-    <!-- <div id="game">
+    <div id="game">
+            <div class="card card1" data-picture="fish">
+                    <img src="imageAssets/Level1Cards/fish.jpg" alt="image of a fish" class="front">
+                    <img src="imageAssets/cardBack.jpg" alt="floral pattern" class="back">
+                </div>
+                <div class="card" data-picture="fish">
+                    <img src="imageAssets/Level1Cards/fish.jpg" alt="image of a fish" class="front">
+                    <img src="imageAssets/cardBack.jpg" alt="floral pattern" class="back">
+                </div>
+            <div class="card" data-picture="fish">
+                    <img src="imageAssets/Level1Cards/fish.jpg" alt="image of a fish" class="front">
+                    <img src="imageAssets/cardBack.jpg" alt="floral pattern" class="back">
+                </div>
+                <div class="card" data-picture="fish">
+                    <img src="imageAssets/Level1Cards/fish.jpg" alt="image of a fish" class="front">
+                    <img src="imageAssets/cardBack.jpg" alt="floral pattern" class="back">
+                </div>
         <div class="card" data-picture="fish">
             <img src="imageAssets/Level1Cards/fish.jpg" alt="image of a fish" class="front">
             <img src="imageAssets/cardBack.jpg" alt="floral pattern" class="back">
@@ -81,24 +98,31 @@
             <img src="imageAssets/Level1Cards/startfish.jpg" alt="image of a starfish" class="front">
             <img src="imageAssets/cardBack.jpg" alt="floral pattern" class="back">
         </div>
-    </div> -->
-
-
+    </div>
+    
     <div id="game2">
-        <div class="card card2" data-picture="blackButterfly">
-            <img src="imageAssets/Level2Cards/blackButterfly.jpg" alt="image of a black butterfly" class="front">
+            <div class="card card2" data-picture="blackButerfly">
+                    <img src="imageAssets/Level2Cards/blackButerfly.jpg" alt="image of a black butterfly" class="front">
+                    <img src="imageAssets/cardBack.jpg" alt="floral pattern" class="back">
+                </div>
+                <div class="card card2" data-picture="blackButerfly">
+                    <img src="imageAssets/Level2Cards/blackButerfly.jpg" alt="image of a black butterfly" class="front">
+                    <img src="imageAssets/cardBack.jpg" alt="floral pattern" class="back">
+                </div>
+        <div class="card card2" data-picture="blackButerfly">
+            <img src="imageAssets/Level2Cards/blackButerfly.jpg" alt="image of a black butterfly" class="front">
             <img src="imageAssets/cardBack.jpg" alt="floral pattern" class="back">
         </div>
-        <div class="card card2" data-picture="blackButterfly">
-            <img src="imageAssets/Level2Cards/blackButterfly.jpg" alt="image of a black butterfly" class="front">
+        <div class="card card2" data-picture="blackButerfly">
+            <img src="imageAssets/Level2Cards/blackButerfly.jpg" alt="image of a black butterfly" class="front">
             <img src="imageAssets/cardBack.jpg" alt="floral pattern" class="back">
         </div>
         <div class="card card2" data-picture="blueButterfly">
             <img src="imageAssets/Level2Cards/blueButterfly.jpg" alt="image of an blue butterfly" class="front">
             <img src="imageAssets/cardBack.jpg" alt="floral pattern" class="back">
         </div>
-        <div class="card card2" data-picture="octopus">
-            <img src="imageAssets/Level1Cards/blueButterfly.jpg" alt="image of an blue butterfly" class="front">
+        <div class="card card2" data-picture="blueButterfly">
+            <img src="imageAssets/Level2Cards/blueButterfly.jpg" alt="image of an blue butterfly" class="front">
             <img src="imageAssets/cardBack.jpg" alt="floral pattern" class="back">
         </div>
         <div class="card card2" data-picture="dottyBug">
@@ -148,13 +172,113 @@
         <div class="card card2" data-picture="weirdBug">
             <img src="imageAssets/Level2Cards/weirdBug.jpg" alt="image of a weird Bug" class="front">
             <img src="imageAssets/cardBack.jpg" alt="floral pattern" class="back">
-        </div> 
-        
+        </div>
     </div>
-    
-    
-    <footer></footer>
-    
-    <script src="script.js"></script>
-</body>
-</html>
+        
+        
+        <div id="game3">
+                <div class="card card3" data-picture="berryFlower">
+                        <img src="imageAssets/Level3Cards/berryFlower.jpg" alt="image of a berry flower" class="front">
+                        <img src="imageAssets/cardBack.jpg" alt="floral pattern" class="back">
+                    </div>
+                    <div class="card card3" data-picture="berryFlower">
+                        <img src="imageAssets/Level3Cards/berryFlower.jpg" alt="image of a berry flower" class="front">
+                        <img src="imageAssets/cardBack.jpg" alt="floral pattern" class="back">
+                    </div>
+                <div class="card card3" data-picture="berryFlower">
+                        <img src="imageAssets/Level3Cards/berryFlower.jpg" alt="image of a berry flower" class="front">
+                        <img src="imageAssets/cardBack.jpg" alt="floral pattern" class="back">
+                    </div>
+                    <div class="card card3" data-picture="berryFlower">
+                        <img src="imageAssets/Level3Cards/berryFlower.jpg" alt="image of a berry flower" class="front">
+                        <img src="imageAssets/cardBack.jpg" alt="floral pattern" class="back">
+                    </div>
+            <div class="card card3" data-picture="berryFlower">
+                <img src="imageAssets/Level3Cards/berryFlower.jpg" alt="image of a berry flower" class="front">
+                <img src="imageAssets/cardBack.jpg" alt="floral pattern" class="back">
+            </div>
+            <div class="card card3" data-picture="berryFlower">
+                <img src="imageAssets/Level3Cards/berryFlower.jpg" alt="image of a berry flower" class="front">
+                <img src="imageAssets/cardBack.jpg" alt="floral pattern" class="back">
+            </div>
+            <div class="card card3" data-picture="blackFlower">
+                <img src="imageAssets/Level3Cards/blackFlower.jpg" alt="image of a black Flower" class="front">
+                <img src="imageAssets/cardBack.jpg" alt="floral pattern" class="back">
+            </div>
+            <div class="card card3" data-picture="blackFlower">
+                <img src="imageAssets/Level3Cards/blackFlower.jpg" alt="image of a black Flower" class="front">
+                <img src="imageAssets/cardBack.jpg" alt="floral pattern" class="back">
+            </div>
+            <div class="card card3" data-picture="blueFlower">
+                <img src="imageAssets/Level3Cards/blueFlower.jpg" alt="image of a blue Flower" class="front">
+                <img src="imageAssets/cardBack.jpg" alt="floral pattern" class="back">
+            </div>
+            <div class="card card3" data-picture="blueFlower">
+                <img src="imageAssets/Level3Cards/blueFlower.jpg" alt="image of a blue Flower" class="front">
+                <img src="imageAssets/cardBack.jpg" alt="floral pattern" class="back">
+            </div>
+            <div class="card card3" data-picture="cactus">
+                <img src="imageAssets/Level3Cards/cactus.jpg" alt="image of a cactus" class="front">
+                <img src="imageAssets/cardBack.jpg" alt="floral pattern" class="back">
+            </div>
+            <div class="card card3" data-picture="cactus">
+                <img src="imageAssets/Level3Cards/cactus.jpg" alt="image of a cactus" class="front">
+                <img src="imageAssets/cardBack.jpg" alt="floral pattern" class="back">
+            </div>
+            <div class="card card3" data-picture="fruitFlower">
+                <img src="imageAssets/Level3Cards/fruitFlower.jpg" alt="image of a fruit Flower" class="front">
+                <img src="imageAssets/cardBack.jpg" alt="floral pattern" class="back">
+            </div>
+            <div class="card card3" data-picture="fruitFlower">
+                <img src="imageAssets/Level3Cards/fruitFlower.jpg" alt="image of a fruitFlower" class="front">
+                <img src="imageAssets/cardBack.jpg" alt="floral pattern" class="back">
+            </div>
+            <div class="card card3" data-picture="lilly">
+                <img src="imageAssets/Level3Cards/lilly.jpg" alt="image of a lilly" class="front">
+                <img src="imageAssets/cardBack.jpg" alt="floral pattern" class="back">
+            </div>
+            <div class="card card3" data-picture="lilly">
+                <img src="imageAssets/Level3Cards/lilly.jpg" alt="image of a lilly" class="front">
+                <img src="imageAssets/cardBack.jpg" alt="floral pattern" class="back">
+            </div>  
+            <div class="card card3" data-picture="pinkFlower">
+                <img src="imageAssets/Level3Cards/pinkFlower.jpg" alt="image of a pink Flower" class="front">
+                <img src="imageAssets/cardBack.jpg" alt="floral pattern" class="back">
+            </div>
+            <div class="card card3" data-picture="pinkFlower">
+                <img src="imageAssets/Level3Cards/pinkFlower.jpg" alt="image of a pink Flower" class="front">
+                <img src="imageAssets/cardBack.jpg" alt="floral pattern" class="back">
+            </div> 
+            <div class="card card3" data-picture="redFlower">
+                <img src="imageAssets/Level3Cards/redFlower.jpg" alt="image of a red Flower" class="front">
+                <img src="imageAssets/cardBack.jpg" alt="floral pattern" class="back">
+            </div>
+            <div class="card card3" data-picture="redFlower">
+                <img src="imageAssets/Level3Cards/redFlower.jpg" alt="image of a red Flower" class="front">
+                <img src="imageAssets/cardBack.jpg" alt="floral pattern" class="back">
+            </div> 
+            <div class="card card3" data-picture="rootFlower">
+                <img src="imageAssets/Level3Cards/rootFlower.jpg" alt="image of a root Flower" class="front">
+                <img src="imageAssets/cardBack.jpg" alt="floral pattern" class="back">
+            </div>
+            <div class="card card3" data-picture="rootFlower">
+                <img src="imageAssets/Level3Cards/rootFlower.jpg" alt="image of a root Flower" class="front">
+                <img src="imageAssets/cardBack.jpg" alt="floral pattern" class="back">
+            </div> 
+            <div class="card card3" data-picture="tropicalFlower">
+                <img src="imageAssets/Level3Cards/tropicalFlower.jpg" alt="image of a tropical Flower" class="front">
+                <img src="imageAssets/cardBack.jpg" alt="floral pattern" class="back">
+            </div>
+            <div class="card card3" data-picture="tropicalFlower">
+                <img src="imageAssets/Level3Cards/tropicalFlower.jpg" alt="image of a tropical Flower" class="front">
+                <img src="imageAssets/cardBack.jpg" alt="floral pattern" class="back">
+            </div> </div>
+            
+        </div>
+        
+        
+        <footer></footer>
+        
+        <script src="script.js"></script>
+    </body>
+    </html>

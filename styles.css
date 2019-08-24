@@ -1,7 +1,8 @@
 *{
     padding: 0;
     margin: 0;
-    font-family: 'Cinzel', serif;
+    font-family: 'Lobster', cursive;
+    font-family: 'Cinzel Decorative', cursive;
 }
 
 body{
@@ -39,6 +40,7 @@ body{
     top: 0;
     left: 0;
     z-index: 1;
+    /* display: none; */
 }
 
 .login-logo{
@@ -54,6 +56,16 @@ body{
     text-align: center;
     font-size: 1.5em;
     margin-top: 20px;
+}
+
+.signin{
+    border: solid 1px #878d50;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 500px;
+    padding: 50px 0;
+    margin: auto;
+    margin-top: 50px;
 }
 
 .signin > input {
@@ -75,6 +87,10 @@ body{
     margin-top: 20px;
     padding: 10px;
     cursor: pointer;
+    display: block;
+    text-align: center;
+    margin: auto;
+    margin-top: 30px;
 }
 
 .start:hover {
@@ -249,14 +265,12 @@ body{
 
 #player {
     display: inline-block;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    padding: 7px 80px;
-    margin: 10px 0;
-    color: #888d53;
-    font-size: 18px;
-    font-weight: 500;
+    margin-top: 20px;
+    color: rgba(140, 137, 97, 0.7);
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 0px;
+    font-family: 'Cinzel Decorative', cursive;
 }
 
 
@@ -274,7 +288,7 @@ body{
 
 .banner2 {
     height: 3em;
-    background-color: rgba(202, 182, 156, 0.5);
+    background-color:  rgba(140, 137, 97, 0.6);
     margin-bottom: 0.3em;
     font-size: 15px;
     font-weight: 500;
@@ -285,15 +299,16 @@ body{
     display: inline-block;
     margin-top: 13px;
     color: darkolivegreen;
-    font-weight: 600;
-    
+    color: white;
+    font-weight: 500;
 }
 
 #time-remaining {
     display: inline-block;
     margin-right: 180px;
     color: darkolivegreen;
-    font-weight: 600;
+    color: white;
+    font-weight: 500;
     
 }
 
@@ -301,39 +316,39 @@ body{
 /*CARDS */
 
 
-/#game {
-    /* width: 50%;
-    height: 50%; */
+#game {
     margin: auto;
     display: flex;
     flex-wrap: wrap;  
-    perspective: 1000px; 
-    display: none;
+    perspective: 1000px;   
 } 
 
 
 #game2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto; 
+    display: none;
+    
+}
+
+#game3 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 90%;
     margin: auto;
-    display: flex;
-    flex-wrap: wrap; 
-    perspective: 1000px; 
+    display: none;
 }
 
 .card {
-    width: calc(50% - 10px);
-    padding-bottom: calc(50% - 10px);
     position: relative;
     margin: 5px;
     transform-style: preserve-3d;
     transition: transform .5s;
 }
-
-.card2 {
-    flex: 1 0 10%;
-}
-
-
 
 .card.flip {
     transform: rotateY(180deg);
@@ -365,48 +380,75 @@ footer {
 
 @media (min-width:1024px) {
     #game {
-        width: 45%;
-        height: 45%;  
-    }
-    .card {
-        width: calc(33% - 20px);
-        padding-bottom: calc(16% - 60px);
-        margin: 10px;
+        width: 80%;
+        justify-content: center;
+        margin-top: 50px;
     }
 
+    #game2 {
+        justify-content: center;
+        width: 75%;
+        margin-top: 15px;
+        margin-bottom: 50px;
+    }
+
+    #game3 {
+        justify-content: center;
+        width: 100%;   
+        margin-top: 10px; 
+        margin-bottom: 60px;
+    }
+
+    .card {
+        width: 250px;
+        height: 250px;
+        margin: 10px;        
+    }
+
+
     .card2 {
-        flex: 1 0 19%;
+        width: 200px;
+        height: 200px;
+        /* margin: 10px; */
+    }
+
+    .card3 {
+        width: 200px;
+        height: 200px;
+        /* margin: 10px; */
     }
 
     footer {
-        position: absolute;
+        position: fixed;
+        bottom: 0;
     }
     .login-logo{
         width: 20%;
     }
     
     .logo {
-        width: 17em;
+        width: 13em;
     }
     
     .banner {
-        height: 12em;
+        height: 8.5em;
     }
     
     .banner2 {
-        height: 4em;
+        height: 3em;
+
     }
     
     #turns { 
-        margin-top: 13px;
+        margin-top: 10px;
         display: inline-block;
-        font-size: 15px;
+        font-size: 20px;
     }
     
     #time-remaining {
         display: inline-block;
-        margin-right: 500px;
-        font-size: 15px;
+        margin-right: 520px;
+        font-size: 20px;
     }
 
     #tryAgain {

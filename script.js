@@ -1,5 +1,6 @@
 const startGame = document.querySelector('.start');
-const game = document.querySelector('.game');
+const game = document.getElementById('game');
+const game2 = document.getElementById('game2');
 const login = document.querySelector('#login');
 const form = document.querySelector('form');
 const modal = document.getElementById('simpleModal');
@@ -14,9 +15,11 @@ let score = 0;
 const soundForCardFlip = new Audio('sounds/card-flip.wav');
 const soundForCardsMatch = new Audio('sounds/match.mp3');
 const soundForNoMatchingCard = new Audio('sounds/no-match.wav');
-const bgMusic = new Audio('sounds/bg.mp3');
+let bgMusic = new Audio('sounds/bg.mp3');
 let nextLevel = document.getElementById('newLevel');
 let playBtn = document.getElementById('play');
+
+bgMusic.volume = 0.1;
 
 function openModal(){
   closeBtn.addEventListener('click', closeModal);
@@ -35,9 +38,7 @@ startGame.addEventListener('click', hide);
 login.addEventListener('submit', e => {
   bgMusic.play();
   e.preventDefault();
-  hide();
-  /////////////////////////////////////////////////////////////////////
-  
+  hide(); 
 });
 
 
@@ -70,8 +71,11 @@ function hide(){
     if (isMatch) {
       soundForCardsMatch.play();
       score += 2;
+      turning();
       disableCards();
-    }else {
+    }
+    else {
+        turning();
       unflipCards();
       soundForNoMatchingCard.play();
     }
@@ -81,17 +85,40 @@ function hide(){
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
     resetBoard();
-  }
-  
-  function unflipCards() {
-    if(turns < 10){
-      turns += 1;
-    }else{
-      document.getElementById("gameover").style.display = "block";
+    if(score === 10 || score === 28) {
+      document.getElementById("nextLevel").style.display = "block";
+      bgMusic.volume = 0;
+      playBtn.addEventListener('click', () => {
+        document.getElementById("nextLevel").style.display = "none";
+        bgMusic.volume = 0.1;
+      });
+    } 
+    if (score === 10){
+      document.getElementById("game").style.display = "none";
+      document.getElementById("game2").style.display = "flex";
     }
-    
-    document.getElementById('turns').innerText = 'Flips: ' + turns;
-    lockBoard = true;
+    if (score === 28){
+      document.getElementById("game2").style.display = "none";
+      document.getElementById("game3").style.display = "flex";
+    }
+    if (score === 52) {
+      document.getElementById("game3").style.display = "none";
+      document.getElementById("youWon").style.display = "block";
+    }
+  }
+
+  function turning() {
+    if(turns < 30){
+        turns += 1;
+      }else{
+        document.getElementById("gameover").style.display = "block";
+      }
+
+      document.getElementById('turns').innerText = 'Turns: ' + turns;
+      lockBoard = true;
+  }
+
+  function unflipCards() {
     
     setTimeout(() => {
       firstCard.classList.remove('flip');
@@ -100,6 +127,7 @@ function hide(){
       resetBoard();
     }, 1100);
   }
+  
   
   function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
@@ -115,41 +143,41 @@ function hide(){
   
   cards.forEach(card => card.addEventListener('click', flipCard));
   
+//TIMER needs testing
+
+function startTimer(duration, display) {
+  var timer = duration, seconds;
+  setInterval(function () {
+      seconds = parseInt(timer);
+
+      seconds = seconds < 10 ? + seconds : seconds;
+
+      display.textContent = 'Time: ' + seconds;
+
+      if (--timer < 0) {
+          document.getElementById("gameover").style.display = "block";
+      }  
+    //   if(score === 10){
+    //     document.getElementById("nextLevel").style.display = "block";
+    //     play.addEventListener('click', () => {
+    //       timer++;
+    //     });
+        
+    //   }
+    //   if (--timer < 0 && score !== 22) {
+    //     document.getElementById("gameover").style.display = "block";
+    //   }
+  }, 1000);
+}
+
+window.onload = function () {
+  var timeLimit = 60,
+      display = document.querySelector('#time-remaining');
+  startTimer(timeLimit, display);
+};
 
 
-//   let time = 0;
-//   let countUp = setInterval(function(){
-//     if(hasFlippedCard){
-//       ++time;
-//     }
-//   }, 600);
-
-
-// function startTimer(duration, display) {
-//   var timer = duration, seconds;
-//   setInterval(function () {
-//       seconds = parseInt(timer);
-
-//       seconds = seconds < 10 ? "0" + seconds : seconds;
-
-//       display.textContent = 'Time: ' + seconds;
-
-//       if (--timer < 0 && score !== 6) {
-//           document.getElementById("gameover").style.display = "block";
-//       }
-//       if(score === 6){
-//         timer = 0;
-//         document.getElementById("nextLevel").style.display = "block";
-//       }
-//   }, 1000);
-// }
-
-// window.onload = function () {
-//   var timeLimit = 20,
-//       display = document.querySelector('#time-remaining');
-//   startTimer(timeLimit, display);
-// };
-
+//losing
 document.getElementById("tryAgain").addEventListener("click", function(){
   document.location.reload();
 });
@@ -158,7 +186,6 @@ document.getElementById("tryAgain").addEventListener("click", function(){
 document.getElementById("playAgain").addEventListener("click", function(){
   document.location.reload();
 });
-//
 
 
 
