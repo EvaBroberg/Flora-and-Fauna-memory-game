@@ -1,8 +1,7 @@
 *{
     padding: 0;
     margin: 0;
-    font-family: 'Lobster', cursive;
-    font-family: 'Cinzel Decorative', cursive;
+    font-family: 'Scope One', serif;
 }
 
 body{
@@ -48,22 +47,22 @@ body{
     margin-left: auto;
     margin-right: auto;
     width: 60%;
-    margin-top: 7em;
+    margin-top: 3em;
 }
 
 .pickname{
-    color: #888d53;
+    color: #fafafa;
     text-align: center;
     font-size: 1.5em;
     margin-top: 20px;
 }
 
-.signin{
-    border: solid 1px #878d50;
+.signin {
+    border: solid 1px #c8c0a2;
     border-radius: 25px;
-    background-color: rgba(255, 255, 255, 0.8);
-    width: 500px;
-    padding: 50px 0;
+    background-color: #c8c0a2;
+    width: 80%;
+    padding: 20px 0;
     margin: auto;
     margin-top: 50px;
 }
@@ -73,19 +72,20 @@ body{
     background-color: transparent;
     border: 0;
     outline: 0;
-    border-bottom: 1px solid#888d53; 
+    border-bottom: 1px solid#fafafa; 
     text-align: center;
 }
 
 .start{
-    color: #888d53;
+    color: #b5ac8a;
     font-size: 1em;
     font-weight: bold;
-    background-color: transparent;
-    border: 1px solid #888d53;
+    background-color: #fafafa;
+    border: 1px solid #fafafa;
+    border-radius: 25px;
     outline: 0;
     margin-top: 20px;
-    padding: 10px;
+    padding: 15px;
     cursor: pointer;
     display: block;
     text-align: center;
@@ -94,7 +94,8 @@ body{
 }
 
 .start:hover {
-    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid #f2e7c7;
+    background-color: #f2e7c7;
 }
 
 /*Game over*/
@@ -183,279 +184,389 @@ body{
 #playAgain:hover{
     background-color: #888d53;
     cursor: pointer; */
-
-/*Next Level*/
-
-#nextLevel {
-    position: fixed;
-    background-color: #f2e7c7;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    display: none;
-}
-
-#play {
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 40%;
-    text-align: center;
-    font-size: 25px;
-    background-color: #98a24c;
-    border: solid 1px #98a24c;
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    color: #f2e7c7;
-}
-
-/*Modal*/
-.modal{
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0; top: 0;
-    height: 100%;
-    width: 100%;
-    overflow: auto;
-    background-color: rgba(88, 88, 88, 0.7);
-}
-
-.modal-content{
-    background-color: #ebeee3;
-    margin: 50% auto;
-    padding: 50px;
-    width: 70%;
-}
-
-.modal-content > p{
-    font-weight: bold;
-    font-size: 1.2em;
-    letter-spacing: 2px;
-    color: #888d53;
-}
-
-.closeBtn{
-    font-size: 3em;
-    color: #ebeee3;
-    position: absolute;
-    right: 20px;
-    top: 5px;
-}
-
-.closeBtn:hover, .closeBtn:focus {
-    color: #98a24c;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-
-#username {
-    font-size: 1.2em;
-    padding-top: 0.5em;
-    margin-left: 1em;
-    color: #98a24c;
-}
-
-.player {
-    text-align: center;
-}
-
-#player {
-    display: inline-block;
-    margin-top: 20px;
-    color: rgba(140, 137, 97, 0.7);
-    font-size: 25px;
-    font-weight: 600;
-    letter-spacing: 0px;
-    font-family: 'Cinzel Decorative', cursive;
-}
-
-
-.logo {
-    width: 10em;
-    margin: auto;
-    position: absolute;
-    top: 10; left: 0; right: 0;
-}
-
-.banner {
-    height: 7em;
-    background-color: rgba(255, 255, 255, 0.8);
-}
-
-.banner2 {
-    height: 3em;
-    background-color:  rgba(140, 137, 97, 0.6);
-    margin-bottom: 0.3em;
-    font-size: 15px;
-    font-weight: 500;
-    text-align: center;
-}
-
-#turns { 
-    display: inline-block;
-    margin-top: 13px;
-    color: darkolivegreen;
-    color: white;
-    font-weight: 500;
-}
-
-#time-remaining {
-    display: inline-block;
-    margin-right: 180px;
-    color: darkolivegreen;
-    color: white;
-    font-weight: 500;
     
-}
-
-
-/*CARDS */
-
-
-#game {
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;  
-    perspective: 1000px;   
-} 
-
-
-#game2 {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 90%;
-    margin: auto; 
-    display: none;
+    /*Next Level*/
     
-}
-
-#game3 {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 90%;
-    margin: auto;
-    display: none;
-}
-
-.card {
-    position: relative;
-    margin: 5px;
-    transform-style: preserve-3d;
-    transition: transform .5s;
-}
-
-.card.flip {
-    transform: rotateY(180deg);
-}
-
-.front,
-.back {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
-} 
-
-.front {
-    transform: rotateY(180deg);
-}
-
-
-/* FOOTER */
-
-footer {
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem; 
-    background-color: rgba(202, 182, 156, 0.5);
-}
-
-/*Media queries*/
-
-@media (min-width:1024px) {
-    #game {
-        width: 80%;
-        justify-content: center;
-        margin-top: 50px;
-    }
-
-    #game2 {
-        justify-content: center;
-        width: 75%;
-        margin-top: 15px;
-        margin-bottom: 50px;
-    }
-
-    #game3 {
-        justify-content: center;
-        width: 100%;   
-        margin-top: 10px; 
-        margin-bottom: 60px;
-    }
-
-    .card {
-        width: 250px;
-        height: 250px;
-        margin: 10px;        
-    }
-
-
-    .card2 {
-        width: 200px;
-        height: 200px;
-        /* margin: 10px; */
-    }
-
-    .card3 {
-        width: 200px;
-        height: 200px;
-        /* margin: 10px; */
-    }
-
-    footer {
+    #nextLevel {
         position: fixed;
-        bottom: 0;
+        background-color: #f2e7c7;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        display: none;
     }
-    .login-logo{
-        width: 20%;
+    
+    #play {
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 40%;
+        text-align: center;
+        font-size: 25px;
+        background-color: #98a24c;
+        border: solid 1px #98a24c;
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        color: #f2e7c7;
     }
+    
+    /*Modal*/
+    .modal{
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0; top: 0;
+        height: 100%;
+        width: 100%;
+        overflow: auto;
+        background-color: rgba(88, 88, 88, 0.7);
+    }
+    
+    .modal-content{
+        background-color: #ebeee3;
+        margin: 50% auto;
+        padding: 50px;
+        width: 70%;
+    }
+    
+    .modal-content > p{
+        font-weight: bold;
+        font-size: 1.2em;
+        letter-spacing: 2px;
+        color: #888d53;
+    }
+    
+    .closeBtn{
+        font-size: 3em;
+        color: #ebeee3;
+        position: absolute;
+        right: 20px;
+        top: 5px;
+    }
+    
+    .closeBtn:hover, .closeBtn:focus {
+        color: #98a24c;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+    
+    #username {
+        font-size: 1em;
+        padding-top: 0.5em;
+        color: #fafafa;
+    }
+    
+    .player {
+        text-align: center;
+    }
+    
+    #player {
+        display: inline-block;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        color: rgba(140, 137, 97, 0.7);
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: 0px;
+    }
+    
     
     .logo {
-        width: 13em;
+        width: 10em;
+        margin: auto;
+        position: absolute;
+        top: 10; left: 0; right: 0;
     }
     
     .banner {
-        height: 8.5em;
+        height: 7em;
+        background-color: rgba(255, 255, 255, 0.8);
     }
     
     .banner2 {
         height: 3em;
-
+        background-color:  rgba(140, 137, 97, 0.6);
+        margin-bottom: 0.3em;
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
     }
     
     #turns { 
-        margin-top: 10px;
         display: inline-block;
-        font-size: 20px;
+        margin-top: 13px;
+        color: darkolivegreen;
+        color: white;
+        font-weight: 500;
     }
     
     #time-remaining {
         display: inline-block;
-        margin-right: 520px;
-        font-size: 20px;
-    }
-
-    #tryAgain {
-        height: 200px;
-  width: 200px;
-  border-radius: 50%;
-  border: 1px solid #98a24c;
+        margin-right: 180px;
+        color: darkolivegreen;
+        color: white;
+        font-weight: 500;
         
     }
-}
+    
+    
+    /*CARDS */
+    
+    
+    #game {
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;  
+        width: 100%;
+        justify-content: center;
+    } 
+    
+    
+    #game2 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: auto; 
+        justify-content: center;
+        padding-bottom: 45px;
+        display: none;
+    }
+    
+    #game3 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: auto;
+        justify-content: center;
+        padding-bottom: 45px;
+        display: none;
+    }
+    
+    .card {
+        position: relative;
+        margin: 5px;
+        transform-style: preserve-3d;
+        transition: transform .5s;
+        width: 190px;
+        height: 190px;
+    }
+    
+    .card2 {
+        width: 115px;
+        height: 115px; 
+        margin: 5px;
+    }
+
+    .card3{
+        width: 80px;
+        height: 80px; 
+        margin: 5px;
+    }
+    
+    .card.flip {
+        transform: rotateY(180deg);
+    }
+    
+    .front,
+    .back {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        backface-visibility: hidden;
+    } 
+    
+    .front {
+        transform: rotateY(180deg);
+    }
+    
+    
+    /* FOOTER */
+    
+    footer {
+        position: fixed;
+        text-align: center;
+        bottom: 0;
+        width: 100%;
+        height: 2.5rem; 
+        background-color: rgba(202, 182, 156, 0.5);
+        transition: all .2s ease-in-out;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    footer:hover{
+        transform: scale(2);
+        padding-bottom: 15px;
+    }
+    
+    .copyright {
+        font-size: 10px;  
+        text-align: center;
+        vertical-align: middle;
+        line-height: 40px;  
+        margin-right: 10px;
+        color: #70643f;
+    }
+    
+    
+    .git{
+        width: 30px;
+        padding: 5px;
+    }
+
+    .git:hover{
+        filter: opacity(50%);
+    }
+    
+    /*Media queries Large Mobile phones*/
+    @media (min-width:414px){
+        .game2{
+            padding-bottom: 0px;
+        }
+        .card2 {
+            width: 125px;
+            height: 125px; 
+        }
+    }
+    
+    /*Media queries iPads*/
+    @media (min-width:768px){
+        .card2 {
+            width: 115px;
+            height: 115px; 
+        }
+
+        .card3{
+            width: 115px;
+            height: 115px;
+        }
+        #game2{
+            margin-top: 2em;
+        }
+
+        #player {
+            margin-top: 30px;
+            font-size: 30px;
+        }
+        .logo {
+            width: 15em;
+            margin-top: 10px;
+        }
+        .banner {
+            height: 12em;
+        }
+        .banner2 {
+            height: 3.5em;
+        }
+        #turns {
+            font-size: 20px;
+            margin-left: 20px;
+        }
+        #time-remaining {
+            margin-right: 270px;
+            font-size: 20px;
+        }
+        .signin {
+            width: 60%;
+        }
+        .login-logo {
+            margin-top: 200px;
+            margin-bottom: 30px;
+            width: 40%;
+        }
+        
+    }
+    
+    /*Media queries Desktop*/
+    
+    @media (min-width:1024px) {
+        #player {
+            margin-top: 30px;
+            margin-bottom: 0;
+            font-size: 25px;
+        }
+        
+        #game {
+            width: 80%;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        
+        #game2 {
+            width: 75%;
+            margin-top: 15px;
+            margin-bottom: 50px;
+        }
+        
+        #game3 {
+            justify-content: center;
+            width: 100%;   
+            margin-top: 10px; 
+            margin-bottom: 60px;
+        }
+        
+        .card {
+            width: 250px;
+            height: 250px;
+            margin: 10px;        
+        }
+        
+        
+        .card2 {
+            width: 200px;
+            height: 200px;
+            /* margin: 10px; */
+        }
+        
+        .card3 {
+            width: 200px;
+            height: 200px;
+            /* margin: 10px; */
+        }
+        .login-logo{
+            width: 20%;
+        }
+        
+        .logo {
+            width: 13em;
+        }
+        
+        .banner {
+            height: 8.5em;
+        }
+        
+        .banner2 {
+            height: 3em;
+            
+        }
+        
+        #turns { 
+            margin-top: 10px;
+            display: inline-block;
+            font-size: 20px;
+        }
+        
+        #time-remaining {
+            display: inline-block;
+            margin-right: 520px;
+            font-size: 20px;
+        }
+        
+        #tryAgain {
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            border: 1px solid #98a24c;
+            
+        }
+        .signin {
+            width: 30%;
+        }
+    }
+    
