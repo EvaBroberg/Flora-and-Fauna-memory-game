@@ -19,10 +19,37 @@ let bgMusic = new Audio('sounds/bg.mp3');
 let nextLevel = document.getElementById('newLevel');
 let playBtn = document.getElementById('play');
 let display = document.getElementById("time-remaining").textContent;
-var timeLimit = 60;
-var interval;
+let timeLimit = 60;
+let interval;
 
-bgMusic.volume = 0.1;
+
+bgMusic.volume = 0.05;
+soundForCardsMatch.volume = 0.3;
+soundForNoMatchingCard.volume = 0.3;
+soundForCardFlip.volume = 0.3;
+
+    document.getElementById("info").addEventListener("click", function(){
+        document.getElementById("rules").style.display = "block";
+    })
+
+    document.getElementById("gotIt").addEventListener("click", function(){
+        document.getElementById("rules").style.display = "none";
+    })
+
+    document.getElementById("iconYes").addEventListener("click", function(){
+        document.getElementById("iconYes").style.display = "none";
+        document.getElementById("iconNo").style.display = "inline";
+        bgMusic.volume = 0;
+      });
+
+      document.getElementById("iconNo").addEventListener("click", function(){
+        document.getElementById("iconNo").style.display = "none";
+        document.getElementById("iconYes").style.display = "inline";
+        bgMusic.volume = 0.1;
+      });
+
+  
+
 
 
 function openModal(){
@@ -96,15 +123,15 @@ function disableCards() {
 
 
 function levels(){
-    // if(score === 10 || score === 28) {
-    //     document.getElementById("nextLevel").style.display = "block";
-    //     bgMusic.volume = 0;
-    //     playBtn.addEventListener('click', () => {
-    //         document.getElementById("nextLevel").style.display = "none";
-    //         bgMusic.volume = 0.1;
-    //         startCountDown();
-    //     });
-    // } 
+    if(score === 10 || score === 28) {
+        document.getElementById("nextLevel").style.display = "block";
+        bgMusic.volume = 0;
+        playBtn.addEventListener('click', () => {
+            document.getElementById("nextLevel").style.display = "none";
+            bgMusic.volume = 0.1;
+            startCountDown();
+        });
+    } 
     if (score === 10){
         turns = 0;
         document.getElementById("game").style.display = "none";

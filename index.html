@@ -9,17 +9,36 @@
     <title>Flora and Fauna</title>
 </head>
 <body>
-    
+
     <div id="wholeGame" class="main-wrapper">
+            <div id="rules">
+                    <img class="fish fish1" src="imageAssets/fish.png" alt="image of a fish">
+                    <img class="fish fish2" src="imageAssets/fish2.png" alt="image of a fish">
+                <h1>PLAYING FLORA AND FAUNA</h1>
+                
+                <p>
+                     Please enter the name of your choice and click the button to start the game.
+                     On the right you can see icons to toggle sound or come back to game rules if you'd like to refresh your memory. As you start the game you will see rows of cards displayed fave down, the timer will start and the number of turns will add up as you turn two cards. If cards have matched they will stay face up and if not they will flip back over.<br><br>When all cards are facing up you proceed to next level<br><br>You will have 60 seconds to complete each level without exceeding the maximum of 30 turns. There are 3 levels in total, you WIN the game when the 3rd level is completed!
+                </p>
+                <button id="gotIt">GOT IT!</button>
+            </div>
+            <div class="icons">
+                    <img id="info" class="icon" src="imageAssets/info.png" alt="info icon">
+                    <img id="iconYes" class="icon" src="imageAssets/audio.png" alt="audio icon">
+                    <img id="iconNo" class="icon" src="imageAssets/noaudio.png" alt="no audio icon">
+                </div>
         <!-- Next Level -->
         <div id="nextLevel">
-            <h1>NEXT LEVEL</h1>
+            <img class="butterfly" src="imageAssets/butterfly.png" alt="image of a butterfly">
+            <h1 class="level">NEXT LEVEL</h1>
             <button id="play">Play</button>
         </div>
         <!-- Oh no! Try Again -->
         <div id="gameover">
-            <h1>You lost!</h1>
+            <img class="bat topBat" src="imageAssets/bat top.png" alt="image of the bat">
+            <h1 class="sorry">Sorry You lost!</h1>
             <button id="tryAgain">Try again</button>
+            <img class="bat bottombat" src="imageAssets/bat bottom.png" alt="image of the bat">
         </div>
         <!-- You Won -->
         <div id="youWon">

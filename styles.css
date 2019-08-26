@@ -12,17 +12,90 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
 } 
+/*Rules*/
 
-/* MAIN WRAPPER */
-
-.main-wrapper {
-    
+#rules {
+    position: fixed;
+    background-color: #f2e7c7;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: none;
 }
 
-.top-design {
-    
+#rules h1 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 25px;
+    color: #a49a75;
+    letter-spacing: 2px;
 }
 
+#rules p {
+    margin-top: 40px;
+    font-size: 15;
+    width: 90%;
+    text-align: justify;
+    margin-right: auto;
+    margin-left: auto;
+    color: #70643f;
+}
+
+.fish{
+    position: absolute;
+    width: 100px;
+    margin-top: 70px;
+}
+
+.fish1 {
+    left: 15;
+}
+
+.fish2 {
+    right: 15;
+}
+
+#gotIt {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #a49a75;
+  border: solid 1px #a49a75;
+    border-radius: 5px; 
+    margin-top: 30px;
+    color: #f2e7c7;
+    font-size: 20px;
+    width: 100px;
+    height: 40px;
+}
+
+
+
+#gotIt:hover {
+    background-color: #98a24c;
+        cursor: pointer;
+}
+/* Icons */
+
+.icons {
+    float: right;
+    padding: 10px 20px;
+}
+
+.icon{
+    width: 25px;
+    padding: 2px;
+}
+
+#iconNo{
+    display: none;
+}
+
+.icon:hover{
+    filter: opacity(50%);
+    cursor: pointer;
+}
 
 /*Start game*/
 .hide{
@@ -106,40 +179,49 @@ body{
     height: 100%;
     z-index: 2;
     display: none;
-    
 }
 
-#gameover h1 {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    text-align: center;
-    font-size: 50px;
-    color: #98a24c;
+.bat{
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.topBat{
+    margin-top: 60px;
+}
+
+.bottomBat{
+    margin-top: 60px;
+}
+
+.sorry{
+        font-size: 25px;
+        text-align: center;
+        font-weight: 500;
+        margin-top: 60px;
 }
 
 #tryAgain {
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 40%;
-    text-align: center;
-    font-size: 25px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #98a24c;
     border: solid 1px #98a24c;
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
+    border-radius: 5px;
+    margin-top: 30px;
     color: #f2e7c7;
+    font-size: 20px;
+    width: 120px;
+    height: 40px;
 }
 
 #tryAgain:hover{
-    background-color: #888d53;
+    background-color: #a49a75;
     cursor: pointer;
 }
+
 
 /*You won*/
 
@@ -196,20 +278,38 @@ body{
         display: none;
     }
     
-    #play {
-        position: absolute;
-        top: 55%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 40%;
-        text-align: center;
+    .butterfly {
+        width: 15em;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 100px;
+    }
+    
+    .level {
         font-size: 25px;
+        text-align: center;
+        font-weight: 500;
+        margin-top: 20px;
+    }
+    
+    #play {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
         background-color: #98a24c;
-        border: solid 1px #98a24c;
-        height: 200px;
-        width: 200px;
-        border-radius: 50%;
+      border: solid 1px #98a24c;
+        border-radius: 5px; 
+        margin-top: 30px;
         color: #f2e7c7;
+        font-size: 20px;
+        width: 100px;
+        height: 40px;
+    }
+
+    #play:hover {
+        background-color: #a49a75;
+        cursor: pointer;
     }
     
     /*Modal*/
@@ -353,16 +453,16 @@ body{
         margin: 5px;
         transform-style: preserve-3d;
         transition: transform .5s;
-        width: 160px;
-        height: 160px;
+        width: 155px;
+        height: 155px;
     }
     
     .card2 {
-        width: 115px;
-        height: 115px; 
-        margin: 5px;
+        width: 110px;
+        height: 110px; 
+        margin: 2px;
     }
-
+    
     .card3{
         width: 80px;
         height: 80px; 
@@ -420,23 +520,46 @@ body{
         width: 30px;
         padding: 5px;
     }
-
+    
     .git:hover{
         filter: opacity(50%);
     }
-
-
+    
+    
     /*Media queries Medium Mobile phones*/
     @media (min-width:375px){
         .card {
-            width: 190px;
-            height: 190px;
+            width: 170px;
+            height: 170px;
+        }
+        .card2 {
+            width: 115px;
+            height: 115px; 
+        }
+        .card3 {
+            width: 80px;
+            height: 80px; 
         }
     }
-
-
+     /*Media queries Large Mobile phones 2*/
+     @media (min-width:375px){
+        #rules h1 {
+            font-size: 30px;
+        }
+        
+        #rules p {
+            margin-top: 40px;
+            font-size: 18px;
+        }
+        
+        .fish{
+            width: 105px;
+            margin-top: 75px;
+        }
+    }
+   
     /*Media queries Large Mobile phones*/
-    @media (min-width:414px){
+    @media (min-width:411px){
         .game2{
             padding-bottom: 0px;
         }
@@ -444,7 +567,20 @@ body{
             width: 125px;
             height: 125px; 
         }
+        #rules h1 {
+            font-size: 30px;
+        }
+        
+        #rules p {
+            font-size: 18px;
+        }
+        
+        .fish{
+            width: 115px;
+            margin-top: 75px;
+        }
     }
+    
     
     /*Media queries iPads*/
     @media (min-width:768px){
@@ -452,15 +588,18 @@ body{
             width: 115px;
             height: 115px; 
         }
-
+        
         .card3{
             width: 115px;
             height: 115px;
         }
+        #game{
+            margin-top: 2em;
+        }
         #game2{
             margin-top: 2em;
         }
-
+        
         #player {
             margin-top: 30px;
             font-size: 30px;
@@ -491,12 +630,127 @@ body{
             margin-bottom: 30px;
             width: 40%;
         }
+        .card {
+            width: 130px;
+            height: 130px;
+        }
+        .card3 {
+            width: 110px;
+            height: 110px;
+        }
+
+        .butterfly {
+            width: 25em;
+            margin-top: 150px;
+        }
         
+        .level {
+            font-size: 35px;
+            margin-top: 30px;
+        }
+        
+        #play {
+            font-size: 30px;
+            width: 120px;
+            height: 60px;
+        }
+
+        .bat{
+            width: 500px;
+        }
+        
+        .topBat{
+            margin-top: 150px;
+        }
+        
+        .sorry{
+                font-size: 40px;
+        }
+        
+        #tryAgain {
+            font-size: 30px;
+            width: 230px;
+            height: 60px;
+        }
+
+        #rules h1 {
+            margin-top: 100px;
+            font-size: 30px;
+        }
+        
+        #rules p {
+            font-size: 20px;
+            width: 60%;
+            margin-bottom: 70px;
+        }
+        
+        .fish{
+            width: 125px;
+            margin-top: 720px;
+        }
+
+        .fish1{
+            left: 170;
+        }
+
+        .fish2{
+            right: 170;
+        }
+
+        .icon {
+            width: 37px;
+            padding: 3px;
+        }
+        
+        
+    }
+    /*Media queries iPadPro*/
+    @media (min-width:850px){
+        .card{
+            width: 170px;
+            height: 170px;
+        }
+        .card2{
+            width: 150px;
+            height: 150px;
+        }
+        .card3{
+            width: 230px;
+            height: 230px;
+        }
+        #rules h1 {
+            margin-top: 100px;
+            font-size: 50px;
+        }
+        
+        #rules p {
+            font-size: 30px;
+            width: 70%;
+            margin-bottom: 70px;
+        }
+        
+        .fish{
+            width: 180px;
+            margin-top: 990px;
+        }
+
+        .fish1{
+            left: 170;
+        }
+
+        .fish2{
+            right: 170;
+        }
+        #gotIt {
+            font-size: 30px;
+            width: 160px;
+            height: 55px;
+        }
     }
     
     /*Media queries Desktop*/
     
-    @media (min-width:1024px) {
+    @media (min-width:1025px) {
         #player {
             margin-top: 30px;
             margin-bottom: 0;
@@ -568,16 +822,39 @@ body{
             margin-right: 520px;
             font-size: 20px;
         }
-        
-        #tryAgain {
-            height: 200px;
-            width: 200px;
-            border-radius: 50%;
-            border: 1px solid #98a24c;
-            
-        }
+
         .signin {
             width: 30%;
+        }
+
+        .bat{
+            width: 600px;
+        }
+        
+        .topBat{
+            margin-top: 80px;
+        }
+
+        .sorry{
+                font-size: 40px;
+        }
+        
+        #tryAgain {
+            font-size: 25px;
+            width: 140px;
+            height: 50px;
+        }
+        .fish{
+            width: 180px;
+            margin-top: 690px;
+        }
+
+        .fish1{
+            left: 650;
+        }
+
+        .fish2{
+            right: 650;
         }
     }
     
