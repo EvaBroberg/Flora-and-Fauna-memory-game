@@ -128,7 +128,7 @@ Exactly same as 1st and 2nd levels except even more cards are added to the board
 
 <h2>Testing</h2>
 
-Testing information can be found in separate <a href="">testing.md file</a>
+Testing information can be found in separate <a href="testing.md">testing.md file</a>
 
 <h2>Deployment</h2>
 
