@@ -1,13 +1,13 @@
-# <a href="https://evabroberg.github.io/Flora-and-Fauna-memory-game/"><img src="https://github.com/EvaBroberg/Flora-and-Fauna-memory-game/blob/master/imageAssets/logo.png"/></a>
+# <a href="https://evabroberg.github.io/Flora-and-Fauna-memory-game/"><img style="width:50px;" src="imageAssets/logo.png"/></a>
 
 # Flora and Fauna Memory Game
-<div style="text-align: center;"><a href="https://evabroberg.github.io/Flora-and-Fauna-memory-game/">Check out the game</a><br>
-	<a href="https://github.com/EvaBroberg/Flora-and-Fauna-memory-game">Check out the code</a></div><br>
+<div align="center"><a href="https://evabroberg.github.io/Flora-and-Fauna-memory-game/" target="blank">Check out the game</a><br>
+	<a href="https://github.com/EvaBroberg/Flora-and-Fauna-memory-game" target="blank">Check out the code</a></div><br>
 
 
 # Project Goals
 
-Flora and Fauna is a memory game with a goal to entertain and visually appeal the player, game is targeter for anybody who wants a fun way to spend free time, suitable for children but designed for a grown up user.
+Flora and Fauna is a memory game with a goal to entertain and visually appeal to the player, game is targeted for anybody who wants a fun way to spend short period of free time, suitable for children but designed for a grown up user.
 
 <b>Players goals:</b>
 
@@ -26,13 +26,14 @@ Flora and Fauna is a memory game with a goal to entertain and visually appeal th
 	<li>Design is responsive allowing user to play on any device</li>
 	<li>Users name is displayed on the screen during game</li>
 	<li>Colour scheme, sounds and imagery was carefully selected to fit overall game theme</li>
+	<li>Colour scheme was chosen to be neutral and calming, easy to look at and not provocative, stress inducing</li>
 </ul>
 
 The game was created for people of any age that are looking for a fun way to spend a bit of free time and are looking for a game that would not only be entertaining but would also stimulate the brain. While game is kid friendly and easy to understand and navigate, it's primaraly purpose was to appeal for a grown-up who needs to add some fun into their busy scedule.
 
 Game was designed to be responsive, intuitive and easy to use on any devices. Sounds were added to card flips to make it obvious when the match is made or card combination was wrong. Background sound was added in order to make game environment more engaging and stimulating, but the player that prefers soundless game can easily disable sound by clicking a speaker button which is displayed in the obvious place at the top of the screen and is easily recognisable as a tool for sound control.
 
-Game consists of three levels which are increasing in coplexity by adding extra cards. Each level has flora and fauna theme separated by cathegory: 1st level is Sea-creatures sub-cathegory, 2nd level bugs/insects and third plants/flowers. Cathegories were split rather than mixed to increase player's interest in game, when looking forward what awaits on the next level. 
+Game consists of three levels which are increasing in coplexity by adding extra cards. Each level has flora and fauna theme separated by cathegory: 1st level is Sea-creatures sub-cathegory, 2nd level bugs/insects and third plants/flowers. Cathegories were split rather than mixed to increase player's interest in game, when looking forward what awaits on the next level.
 
 Once level is passed, pop up identifying the beginning of next level appears making it easy to follow progress in the game. If player has run out of given time or used up given amount of turns game over screen appears, a big and obvious button with text "Try Again" is displayed encorouging a player to start over. Once the game is won victory music is being played and "Congratulations" overlay fills the screen. Big button with words "Play again" appears similarly like in the "game over" state.
 
@@ -47,20 +48,20 @@ Once level is passed, pop up identifying the beginning of next level appears mak
 <h2>Wireframe mockups</h2>
 
 <ul>
-	<li><a href="" target="_blank">Log-in page</a></li>
-	<li><a href="" target="_blank">First Level</a></li>
-	<li><a href="" target="_blank">Second Level</a></li>
-	<li><a href="" target="_blank">Third Level</a></li>
-	<li><a href="" target="_blank">Lost Page</a></li>
-	<li><a href="" target="_blank">Win Page</a></li>
-	<li><a href="" target="_blank">next Level overlay</a></li>
+	<li><a href="wireframes/login.jpg" target="_blank">Log-in page</a></li>
+	<li><a href="wireframes/1.jpg" target="_blank">First Level</a></li>
+	<li><a href="wireframes/2.jpg" target="_blank">Second Level</a></li>
+	<li><a href="wireframes/3.jpg" target="_blank">Third Level</a></li>
+	<li><a href="wireframes/4.jpg" target="_blank">Lost Page</a></li>
+	<li><a href="wireframes/5.jpg" target="_blank">Win Page</a></li>
+	<li><a href="wireframes/6.jpg" target="_blank">next Level overlay</a></li>
 </ul>
 
 <h2>Features</h2>
 
 Game environment is fully responsive allowing user to play on any devices, desktop version fits all the visual information on the screen without scrolling allowing user to see and engage with all the game features. For mobile view 1st level cards are displayed in pairs rather than in threes in attempt to keep card size larger and avoid unecessary white space at the bottom of the screen, as the number of cards increases cards get smaller attemting to allow as many rows as needed to try ank keep all the cards visable without scrolling.
 
-i- icon for game instructions and speaker icon is added to the Log in page allowing user to familiarise with a game and decided whether they want sound effects or not before game starts. 
+i- icon for game instructions and speaker icon is added to the Log in page allowing user to familiarise with a game and decided whether they want sound effects or not before game starts.
 
 All levels of the game share same design theme (same headder displaying logo in the middle timer on the top left corner, flip count on the top right corner and a good luck message including their chosen name under the header). The only thing changing as the game progresses is the amount of cards displayed and the theme of the cards whick is divided in three categories. Log in page was created to go with an overall design using overlay of the same colour as dominant colour of the game background, same fonts and logo are also displayed. All the overlay displays such as: "You won", "game over", "next level" share exact same style and identical buttons to provide consistancy.
 
@@ -112,7 +113,7 @@ Exactly same as 1st and 2nd levels except even more cards are added to the board
 
 <h2>Testing</h2>
 
-Testing information can be found in separate <a href="">testing.md file</a> 
+Testing information can be found in separate <a href="">testing.md file</a>
 
 <h2>Deployment</h2>
 
@@ -192,22 +193,3 @@ Take following actions in order to run this project locally:
 <h2>Disclaimer</h2>
 
 Game was created for educational purpouses only and is not available for profit. I do not hold copy rights of imagery or sound effects.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 

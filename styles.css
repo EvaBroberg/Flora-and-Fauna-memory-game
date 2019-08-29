@@ -232,7 +232,7 @@ body{
     width: 100%;
     height: 100%;
     z-index: 2;
-    /* display: none;   */
+    display: none;  
 }
 
 #youWon h1 {
