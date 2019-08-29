@@ -61,7 +61,7 @@ body{
     margin-left: auto;
     margin-right: auto;
     background-color: #a49a75;
-  border: solid 1px #a49a75;
+    border: solid 1px #a49a75;
     border-radius: 5px; 
     margin-top: 30px;
     color: #f2e7c7;
@@ -74,14 +74,19 @@ body{
 
 #gotIt:hover {
     background-color: #98a24c;
-        cursor: pointer;
+    cursor: pointer;
 }
 /* Icons */
 
 .icon{
     width: 25px;
     float: right;
-    padding: 10px 20px;
+    padding-top: 15px;
+    padding-right: 15px;
+}
+
+#pause{
+    padding-right: 10px;
 }
 
 #iconNo{
@@ -193,10 +198,10 @@ body{
 }
 
 .sorry{
-        font-size: 25px;
-        text-align: center;
-        font-weight: 500;
-        margin-top: 60px;
+    font-size: 25px;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 60px;
 }
 
 #tryAgain {
@@ -227,629 +232,779 @@ body{
     width: 100%;
     height: 100%;
     z-index: 2;
-    display: none;  
+    /* display: none;   */
 }
 
-/* 
-
 #youWon h1 {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
+    font-size: 35px;
     text-align: center;
-    font-size: 50px;
-    color: #98a24c;
+    padding: 0 20px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin-top: 180px;
+}
+
+.winbutterfly{
+    display: block; 
+}
+
+.butterfly1 {
+    position: absolute;
+    width: 7em;
+    top: 35px;
+    left: 35px;
+}
+
+.butterfly2 {
+    position: absolute;
+    width: 8em;
+    right: 20px;
+    top: 40px;
+}
+
+.butterfly3 {
+    position: absolute;
+    width: 8em;
+    top: 300px;
+    left: 20px;
+}
+
+.butterfly4 {
+    position: absolute;
+    width: 8em;
+    top: 250px;
+    right: 10px;
+}
+
+.butterfly5 {
+    position: absolute;
+    width: 13em;
+    top: 400px;
+    right: 50px;
 }
 
 #playAgain {
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 40%;
-    text-align: center;
-    font-size: 25px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #98a24c;
     border: solid 1px #98a24c;
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
+    border-radius: 5px; 
+    margin-top: 30px;
     color: #f2e7c7;
+    font-size: 20px;
+    width: 120px;
+    height: 40px;
 }
 
 #playAgain:hover{
-    background-color: #888d53;
-    cursor: pointer; */
-    
-    /*Next Level*/
-    
-    #nextLevel {
-        position: fixed;
-        background-color: #f2e7c7;
-        width: 100%;
-        height: 100%;
-        z-index: 2;
-        display: none;
-    }
-    
-    .butterfly {
-        width: 15em;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 100px;
-    }
-    
-    .level {
-        font-size: 25px;
-        text-align: center;
-        font-weight: 500;
-        margin-top: 20px;
-    }
-    
-    #play {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        background-color: #98a24c;
-      border: solid 1px #98a24c;
-        border-radius: 5px; 
-        margin-top: 30px;
-        color: #f2e7c7;
-        font-size: 20px;
-        width: 100px;
-        height: 40px;
-    }
+    background-color: #a49a75;
+    cursor: pointer;
+}
 
-    #play:hover {
-        background-color: #a49a75;
-        cursor: pointer;
+/*Next Level*/
+
+#nextLevel {
+    position: fixed;
+    background-color: #f2e7c7;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: none;
+}
+
+.butterfly {
+    width: 15em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+.level {
+    font-size: 25px;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+#play {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #98a24c;
+    border: solid 1px #98a24c;
+    border-radius: 5px; 
+    margin-top: 30px;
+    color: #f2e7c7;
+    font-size: 20px;
+    width: 100px;
+    height: 40px;
+}
+
+#play:hover {
+    background-color: #a49a75;
+    cursor: pointer;
+}
+
+/*Modal*/
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0; top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(88, 88, 88, 0.7);
+}
+
+.modal-content{
+    background-color: #ebeee3;
+    margin: 50% auto;
+    padding: 50px;
+    width: 70%;
+}
+
+.modal-content > p{
+    font-weight: bold;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    color: #888d53;
+}
+
+.closeBtn{
+    font-size: 3em;
+    color: #ebeee3;
+    position: absolute;
+    right: 20px;
+    top: 5px;
+}
+
+.closeBtn:hover, .closeBtn:focus {
+    color: #98a24c;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+#username {
+    font-size: 1em;
+    padding-top: 0.5em;
+    color: #fafafa;
+}
+
+.player {
+    text-align: center;
+}
+
+#player {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: rgba(140, 137, 97, 0.7);
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0px;
+}
+
+
+.logo {
+    width: 10em;
+    margin: auto;
+    position: absolute;
+    top: 10; left: 0; right: 0;
+}
+
+.banner {
+    height: 7em;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.banner2 {
+    height: 3em;
+    background-color:  rgba(140, 137, 97, 0.6);
+    margin-bottom: 0.3em;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+}
+
+#turns { 
+    display: inline-block;
+    margin-top: 13px;
+    color: darkolivegreen;
+    color: white;
+    font-weight: 500;
+}
+
+#time-remaining {
+    display: inline-block;
+    margin-right: 180px;
+    color: darkolivegreen;
+    color: white;
+    font-weight: 500;
+    
+}
+
+
+/*CARDS */
+
+
+#game {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;  
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 45px;
+} 
+
+
+#game2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto; 
+    justify-content: center;
+    padding-bottom: 45px;
+    display: none;
+}
+
+#game3 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+    padding-bottom: 45px;
+    display: none;
+}
+
+.card {
+    position: relative;
+    margin: 5px;
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    width: 155px;
+    height: 155px;
+}
+
+.card2 {
+    width: 110px;
+    height: 110px; 
+    margin: 2px;
+}
+
+.card3{
+    width: 80px;
+    height: 80px; 
+    margin: 5px;
+}
+
+.card.flip {
+    transform: rotateY(180deg);
+}
+
+.front,
+.back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+} 
+
+.front {
+    transform: rotateY(180deg);
+}
+
+
+/* FOOTER */
+
+footer {
+    position: fixed;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem; 
+    background-color: rgba(202, 182, 156, 0.5);
+    transition: all .2s ease-in-out;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer:hover{
+    transform: scale(2);
+    padding-bottom: 15px;
+}
+
+.copyright {
+    font-size: 10px;  
+    text-align: center;
+    vertical-align: middle;
+    line-height: 40px;  
+    margin-right: 10px;
+    color: #70643f;
+}
+
+
+.git{
+    width: 30px;
+    padding: 5px;
+}
+
+.git:hover{
+    filter: opacity(50%);
+}
+
+
+/*Media queries Medium Mobile phones*/
+@media (min-width:375px){
+    .card {
+        width: 170px;
+        height: 170px;
+    }
+    .card2 {
+        width: 115px;
+        height: 115px; 
+    }
+    .card3 {
+        width: 80px;
+        height: 80px; 
+    }
+}
+/*Media queries Large Mobile phones 2*/
+@media (min-width:375px){
+    #rules h1 {
+        font-size: 30px;
     }
     
-    /*Modal*/
-    .modal{
-        display: none;
-        position: fixed;
-        z-index: 1;
-        left: 0; top: 0;
-        height: 100%;
-        width: 100%;
-        overflow: auto;
-        background-color: rgba(88, 88, 88, 0.7);
+    #rules p {
+        margin-top: 40px;
+        font-size: 18px;
     }
     
-    .modal-content{
-        background-color: #ebeee3;
-        margin: 50% auto;
-        padding: 50px;
-        width: 70%;
+    .fish{
+        width: 105px;
+        margin-top: 75px;
+    }
+}
+
+/*Media queries Large Mobile phones*/
+@media (min-width:411px){
+    .game2{
+        padding-bottom: 0px;
+    }
+    .card2 {
+        width: 125px;
+        height: 125px; 
+    }
+    #rules h1 {
+        font-size: 30px;
     }
     
-    .modal-content > p{
-        font-weight: bold;
-        font-size: 1.2em;
-        letter-spacing: 2px;
-        color: #888d53;
+    #rules p {
+        font-size: 18px;
     }
     
-    .closeBtn{
-        font-size: 3em;
-        color: #ebeee3;
-        position: absolute;
-        right: 20px;
-        top: 5px;
+    .fish{
+        width: 115px;
+        margin-top: 75px;
+    }
+}
+
+
+/*Media queries iPads*/
+@media (min-width:768px){
+    .card2 {
+        width: 115px;
+        height: 115px; 
     }
     
-    .closeBtn:hover, .closeBtn:focus {
-        color: #98a24c;
-        text-decoration: none;
-        cursor: pointer;
+    .card3{
+        width: 115px;
+        height: 115px;
     }
-    
-    
-    #username {
-        font-size: 1em;
-        padding-top: 0.5em;
-        color: #fafafa;
+    #game{
+        margin-top: 2em;
     }
-    
-    .player {
-        text-align: center;
+    #game2{
+        margin-top: 2em;
     }
     
     #player {
-        display: inline-block;
-        margin-top: 5px;
-        margin-bottom: 5px;
-        color: rgba(140, 137, 97, 0.7);
+        margin-top: 30px;
+        font-size: 30px;
+    }
+    .logo {
+        width: 15em;
+        margin-top: 10px;
+    }
+    .banner {
+        height: 12em;
+    }
+    .banner2 {
+        height: 3.5em;
+    }
+    #turns {
         font-size: 20px;
-        font-weight: 600;
-        letter-spacing: 0px;
+        margin-left: 20px;
+    }
+    #time-remaining {
+        margin-right: 270px;
+        font-size: 20px;
+    }
+    .signin {
+        width: 60%;
+    }
+    .login-logo {
+        margin-top: 200px;
+        margin-bottom: 30px;
+        width: 40%;
+    }
+    .card {
+        width: 130px;
+        height: 130px;
+    }
+    .card3 {
+        width: 110px;
+        height: 110px;
+    }
+    
+    .butterfly {
+        width: 25em;
+        margin-top: 150px;
+    }
+    
+    .level {
+        font-size: 35px;
+        margin-top: 30px;
+    }
+    
+    #play {
+        font-size: 30px;
+        width: 120px;
+        height: 60px;
+    }
+    
+    .bat{
+        width: 500px;
+    }
+    
+    .topBat{
+        margin-top: 150px;
+    }
+    
+    .sorry{
+        font-size: 40px;
+    }
+    
+    #tryAgain {
+        font-size: 30px;
+        width: 230px;
+        height: 60px;
+    }
+    
+    #rules h1 {
+        margin-top: 100px;
+        font-size: 30px;
+    }
+    
+    #rules p {
+        font-size: 20px;
+        width: 60%;
+        margin-bottom: 70px;
+    }
+    
+    .fish{
+        width: 125px;
+        margin-top: 720px;
+    }
+    
+    .fish1{
+        left: 170;
+    }
+    
+    .fish2{
+        right: 170;
+    }
+    
+    .icon {
+        width: 37px;
+    }
+    
+    #youWon h1 {
+        font-size: 50px;
+        padding: 0 150px;
+        letter-spacing: 3px;
+        margin-top: 250px;
+    }
+    
+    #playAgain {
+        font-size: 30px;
+        width: 200px;
+        height: 50px;
+    }
+    
+    .butterfly1 {
+        width: 14em;
+    }
+    
+    .butterfly2 {
+        width: 15em;
+        right: 90px;
+    }
+    
+    .butterfly3 {
+        width: 12em;
+        left: 50px;
+        top: 350;
+    }
+    
+    .butterfly4 {
+        width: 11em;
+        top: 340px;
+        right: 55px;
+    }
+    
+    .butterfly5 {
+        width: 20em;
+        top: 550px;
+        right: 250px;
     }
     
     
+}
+/*Media queries iPadPro*/
+@media (min-width:850px){
+    .card{
+        width: 170px;
+        height: 170px;
+    }
+    .card2{
+        width: 150px;
+        height: 150px;
+    }
+    .card3{
+        width: 230px;
+        height: 230px;
+    }
+    #rules h1 {
+        margin-top: 100px;
+        font-size: 50px;
+    }
+    
+    #rules p {
+        font-size: 30px;
+        width: 70%;
+        margin-bottom: 70px;
+    }
+    
+    .fish{
+        width: 180px;
+        margin-top: 990px;
+    }
+    
+    .fish1{
+        left: 170;
+    }
+    
+    .fish2{
+        right: 170;
+    }
+    #gotIt {
+        font-size: 30px;
+        width: 160px;
+        height: 55px;
+    }
+    
+    #youWon h1 {
+        margin-top: 330px;
+        font-size: 55px;
+    }
+    
+    #playAgain {
+        font-size: 35px;
+        width: 220px;
+        height: 70px;
+    }
+    
+    .butterfly1 {
+        width: 17em;
+    }
+    
+    .butterfly2 {
+        width: 17em;
+        right: 120px;
+    }
+    
+    .butterfly3 {
+        width: 15em;
+        left: 70px;
+    }
+    
+    .butterfly4 {
+        width: 15em;
+        top: 400px;
+        right: 75px;
+    }
+    
+    .butterfly5 {
+        width: 30em;
+        top: 670px;
+        right: 350px;
+    }
+}
+
+/*Media queries Desktop*/
+
+@media (min-width:1025px) {
+    #player {
+        margin-top: 30px;
+        margin-bottom: 0;
+        font-size: 25px;
+    }
+    
+    #game {
+        width: 80%;
+        justify-content: center;
+        margin-top: 50px;
+    }
+    
+    #game2 {
+        width: 75%;
+        margin-top: 15px;
+        margin-bottom: 50px;
+    }
+    
+    #game3 {
+        justify-content: center;
+        width: 100%;   
+        margin-top: 10px; 
+        margin-bottom: 60px;
+    }
+    
+    .card {
+        width: 250px;
+        height: 250px;
+        margin: 10px;        
+    }
+    
+    
+    .card2 {
+        width: 200px;
+        height: 200px;
+        /* margin: 10px; */
+    }
+    
+    .card3 {
+        width: 200px;
+        height: 200px;
+        /* margin: 10px; */
+    }
+    .login-logo{
+        width: 20%;
+    }
+    
     .logo {
-        width: 10em;
-        margin: auto;
-        position: absolute;
-        top: 10; left: 0; right: 0;
+        width: 13em;
     }
     
     .banner {
-        height: 7em;
-        background-color: rgba(255, 255, 255, 0.8);
+        height: 8.5em;
     }
     
     .banner2 {
         height: 3em;
-        background-color:  rgba(140, 137, 97, 0.6);
-        margin-bottom: 0.3em;
-        font-size: 15px;
-        font-weight: 500;
-        text-align: center;
+        
     }
     
     #turns { 
+        margin-top: 10px;
         display: inline-block;
-        margin-top: 13px;
-        color: darkolivegreen;
-        color: white;
-        font-weight: 500;
+        font-size: 20px;
     }
     
     #time-remaining {
         display: inline-block;
-        margin-right: 180px;
-        color: darkolivegreen;
-        color: white;
-        font-weight: 500;
-        
+        margin-right: 520px;
+        font-size: 20px;
     }
     
-    
-    /*CARDS */
-    
-    
-    #game {
-        margin: auto;
-        display: flex;
-        flex-wrap: wrap;  
-        width: 100%;
-        justify-content: center;
-        padding-bottom: 45px;
-    } 
-    
-    
-    #game2 {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 100%;
-        margin: auto; 
-        justify-content: center;
-        padding-bottom: 45px;
-        display: none;
+    .signin {
+        width: 30%;
     }
     
-    #game3 {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 100%;
-        margin: auto;
-        justify-content: center;
-        padding-bottom: 45px;
-        display: none;
+    .bat{
+        width: 600px;
     }
     
-    .card {
-        position: relative;
-        margin: 5px;
-        transform-style: preserve-3d;
-        transition: transform .5s;
-        width: 155px;
-        height: 155px;
+    .topBat{
+        margin-top: 80px;
     }
     
-    .card2 {
-        width: 110px;
-        height: 110px; 
-        margin: 2px;
+    .sorry{
+        font-size: 40px;
     }
     
-    .card3{
-        width: 80px;
-        height: 80px; 
-        margin: 5px;
+    #tryAgain {
+        font-size: 25px;
+        width: 140px;
+        height: 50px;
+    }
+    .fish{
+        width: 180px;
+        margin-top: 690px;
     }
     
-    .card.flip {
-        transform: rotateY(180deg);
+    .fish1{
+        left: 650;
     }
     
-    .front,
-    .back {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        backface-visibility: hidden;
-    } 
-    
-    .front {
-        transform: rotateY(180deg);
+    .fish2{
+        right: 650;
+    }
+    #youWon h1 {
+        margin-top: 330px;
+        font-size: 55px;
     }
     
-    
-    /* FOOTER */
-    
-    footer {
-        position: fixed;
-        text-align: center;
-        bottom: 0;
-        width: 100%;
-        height: 2.5rem; 
-        background-color: rgba(202, 182, 156, 0.5);
-        transition: all .2s ease-in-out;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+    #playAgain {
+        font-size: 35px;
+        width: 220px;
+        height: 70px;
     }
     
-    footer:hover{
-        transform: scale(2);
-        padding-bottom: 15px;
+    .butterfly1 {
+        width: 20em;
+        left: 200px;
+        top: 100px;
     }
     
-    .copyright {
-        font-size: 10px;  
-        text-align: center;
-        vertical-align: middle;
-        line-height: 40px;  
-        margin-right: 10px;
-        color: #70643f;
+    .butterfly2 {
+        width: 17em;
+        right: 250px;
+        top: 100px;
     }
     
-    
-    .git{
-        width: 30px;
-        padding: 5px;
+    .butterfly3 {
+        width: 17em;
+        left: 470px;
+        top: 500px;
     }
     
-    .git:hover{
-        filter: opacity(50%);
+    .butterfly4 {
+        width: 15em;
+        top: 400px;
+        right: 75px;
     }
     
-    
-    /*Media queries Medium Mobile phones*/
-    @media (min-width:375px){
-        .card {
-            width: 170px;
-            height: 170px;
-        }
-        .card2 {
-            width: 115px;
-            height: 115px; 
-        }
-        .card3 {
-            width: 80px;
-            height: 80px; 
-        }
+    .butterfly5 {
+        width: 20em;
+        top: 550px;
+        right: 450px;
     }
-     /*Media queries Large Mobile phones 2*/
-     @media (min-width:375px){
-        #rules h1 {
-            font-size: 30px;
-        }
-        
-        #rules p {
-            margin-top: 40px;
-            font-size: 18px;
-        }
-        
-        .fish{
-            width: 105px;
-            margin-top: 75px;
-        }
-    }
-   
-    /*Media queries Large Mobile phones*/
-    @media (min-width:411px){
-        .game2{
-            padding-bottom: 0px;
-        }
-        .card2 {
-            width: 125px;
-            height: 125px; 
-        }
-        #rules h1 {
-            font-size: 30px;
-        }
-        
-        #rules p {
-            font-size: 18px;
-        }
-        
-        .fish{
-            width: 115px;
-            margin-top: 75px;
-        }
-    }
-    
-    
-    /*Media queries iPads*/
-    @media (min-width:768px){
-        .card2 {
-            width: 115px;
-            height: 115px; 
-        }
-        
-        .card3{
-            width: 115px;
-            height: 115px;
-        }
-        #game{
-            margin-top: 2em;
-        }
-        #game2{
-            margin-top: 2em;
-        }
-        
-        #player {
-            margin-top: 30px;
-            font-size: 30px;
-        }
-        .logo {
-            width: 15em;
-            margin-top: 10px;
-        }
-        .banner {
-            height: 12em;
-        }
-        .banner2 {
-            height: 3.5em;
-        }
-        #turns {
-            font-size: 20px;
-            margin-left: 20px;
-        }
-        #time-remaining {
-            margin-right: 270px;
-            font-size: 20px;
-        }
-        .signin {
-            width: 60%;
-        }
-        .login-logo {
-            margin-top: 200px;
-            margin-bottom: 30px;
-            width: 40%;
-        }
-        .card {
-            width: 130px;
-            height: 130px;
-        }
-        .card3 {
-            width: 110px;
-            height: 110px;
-        }
-
-        .butterfly {
-            width: 25em;
-            margin-top: 150px;
-        }
-        
-        .level {
-            font-size: 35px;
-            margin-top: 30px;
-        }
-        
-        #play {
-            font-size: 30px;
-            width: 120px;
-            height: 60px;
-        }
-
-        .bat{
-            width: 500px;
-        }
-        
-        .topBat{
-            margin-top: 150px;
-        }
-        
-        .sorry{
-                font-size: 40px;
-        }
-        
-        #tryAgain {
-            font-size: 30px;
-            width: 230px;
-            height: 60px;
-        }
-
-        #rules h1 {
-            margin-top: 100px;
-            font-size: 30px;
-        }
-        
-        #rules p {
-            font-size: 20px;
-            width: 60%;
-            margin-bottom: 70px;
-        }
-        
-        .fish{
-            width: 125px;
-            margin-top: 720px;
-        }
-
-        .fish1{
-            left: 170;
-        }
-
-        .fish2{
-            right: 170;
-        }
-
-        .icon {
-            width: 37px;
-        }
-        
-        
-    }
-    /*Media queries iPadPro*/
-    @media (min-width:850px){
-        .card{
-            width: 170px;
-            height: 170px;
-        }
-        .card2{
-            width: 150px;
-            height: 150px;
-        }
-        .card3{
-            width: 230px;
-            height: 230px;
-        }
-        #rules h1 {
-            margin-top: 100px;
-            font-size: 50px;
-        }
-        
-        #rules p {
-            font-size: 30px;
-            width: 70%;
-            margin-bottom: 70px;
-        }
-        
-        .fish{
-            width: 180px;
-            margin-top: 990px;
-        }
-
-        .fish1{
-            left: 170;
-        }
-
-        .fish2{
-            right: 170;
-        }
-        #gotIt {
-            font-size: 30px;
-            width: 160px;
-            height: 55px;
-        }
-    }
-    
-    /*Media queries Desktop*/
-    
-    @media (min-width:1025px) {
-        #player {
-            margin-top: 30px;
-            margin-bottom: 0;
-            font-size: 25px;
-        }
-        
-        #game {
-            width: 80%;
-            justify-content: center;
-            margin-top: 50px;
-        }
-        
-        #game2 {
-            width: 75%;
-            margin-top: 15px;
-            margin-bottom: 50px;
-        }
-        
-        #game3 {
-            justify-content: center;
-            width: 100%;   
-            margin-top: 10px; 
-            margin-bottom: 60px;
-        }
-        
-        .card {
-            width: 250px;
-            height: 250px;
-            margin: 10px;        
-        }
-        
-        
-        .card2 {
-            width: 200px;
-            height: 200px;
-            /* margin: 10px; */
-        }
-        
-        .card3 {
-            width: 200px;
-            height: 200px;
-            /* margin: 10px; */
-        }
-        .login-logo{
-            width: 20%;
-        }
-        
-        .logo {
-            width: 13em;
-        }
-        
-        .banner {
-            height: 8.5em;
-        }
-        
-        .banner2 {
-            height: 3em;
-            
-        }
-        
-        #turns { 
-            margin-top: 10px;
-            display: inline-block;
-            font-size: 20px;
-        }
-        
-        #time-remaining {
-            display: inline-block;
-            margin-right: 520px;
-            font-size: 20px;
-        }
-
-        .signin {
-            width: 30%;
-        }
-
-        .bat{
-            width: 600px;
-        }
-        
-        .topBat{
-            margin-top: 80px;
-        }
-
-        .sorry{
-                font-size: 40px;
-        }
-        
-        #tryAgain {
-            font-size: 25px;
-            width: 140px;
-            height: 50px;
-        }
-        .fish{
-            width: 180px;
-            margin-top: 690px;
-        }
-
-        .fish1{
-            left: 650;
-        }
-
-        .fish2{
-            right: 650;
-        }
-    }
-    
+}

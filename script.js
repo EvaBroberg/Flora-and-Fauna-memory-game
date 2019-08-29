@@ -51,6 +51,8 @@ bgMusic.loop = true;
         bgMusic.volume = 0.1;
       });
 
+   
+
 function openModal(){
     closeBtn.addEventListener('click', closeModal);
     window.addEventListener('click', closeOutside);
@@ -152,7 +154,7 @@ function levels(){
 
 
 function turning() {
-    if(turns < 30){
+    if(turns < 29){
         turns ++;
     }
     
@@ -184,7 +186,7 @@ function resetBoard() {
 
 (function shuffle() {
     cards.forEach(card => {
-        let randomPos = Math.floor(Math.random() * 12);
+        let randomPos = Math.floor(Math.random() * 24);
         card.style.order = randomPos;
     });
 })();
