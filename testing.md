@@ -1,4 +1,4 @@
-#Automated Testing
+# Automated Testing
 
 <h1>Code validation</h1>
 
@@ -8,9 +8,23 @@
     <li><li><a href="https://validator.w3.org/" target="blank">Code Beautify JavaScript Validator</a>was used to test JavaScript all the errors caught were fixed.</li>
 </ul>
 
-#Manual Testing
+# UX testing
 
-<h2>Multiple manual tests were done, by myself and several volunteers to ensure game's functionality and in order to detect any errors on different browsers and/or devices.</h2>
+<ul>
+    <li>Game is easy to navigate and not over crowded with unnecessary features allowin user to know exactly what is expected from the in each ste of the game.</li>
+    <li>Game starts with a login form which requires user's input, which then can be submitted by either clicking the button below or by pressing Enter.</li>
+    <li>As User enters game, music starts playing and timer sets off. Timer and turn counter are placed just below the logo at the top of the screen in order to capture users attention</li>
+    <li>User is able to swithc off background music if they prefer a quiete mode</li>
+    <li>Card flips produce a sound adding realistic feel of card game</li>
+    <li>Matching and non-matching crds produce sound to give user a better sensation of move being correct or wrong</li>
+    <li>User is lead to a "New level" overlay before they start next level, allowing them time to get ready for a next game</li>
+    <li>In case of winning the game user is revarded with a victory sound and is encouraged to play again by clicking a button.</li>
+    <li>Flora and Faunta theme was used throughout the design, combining colours and imges to create a sense of playful serenity, hoping to bring user in a high end mature looking game, in order to fight stress of the day and sense of being childish playing the game</li>
+</ul>
+
+# Manual Testing
+
+Multiple manual tests were done, by myself and several volunteers to ensure game's functionality and in order to detect any errors on different browsers and/or devices.
 
 <ol>
     <li>Log-in page:

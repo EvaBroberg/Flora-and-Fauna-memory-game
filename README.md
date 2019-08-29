@@ -148,7 +148,7 @@ Take the following actions in order to view a deployed version of the page:
 Take following actions in order to run this project locally:
 
 <ol>
-	<li>Follow this link to the <a href="https://github.com/EvaBroberg/Alabama-Slammers-Responsive-Website-Project">GitHub repository</a></li>
+	<li>Follow this link to the <a href="https://github.com/EvaBroberg/Flora-and-Fauna-memory-game">GitHub repository</a></li>
 	<li>Under the repository name, click a green button that says "Clone or download"</li>
 	<li>Copy the clone URL (make sure you have selected clone with HTTP section)</li>
 	<li>In your local workspace open Git Bash</li>
@@ -171,37 +171,35 @@ Take following actions in order to run this project locally:
 <h4>Media</h4>
 
 <ul>
-	<li>Images used for cards and logo were taken fron free sourcs vintage botanical imagery collection at <a href="#"></a></li>
-	<li>Sounds for the game were taken from <a href="#"></a></li>
+	<li>Images used for cards and logo were taken fron free source vintage botanical imagery collection at <a href="https://www.flickr.com/photos/biodivlibrary/albums/">Flickr</a></li>
+	<li>Sounds for the game were taken from a <a href="https://freesound.org/"></a>free sound library</li>
 </ul>
 
 <h4>Code</h4>
 
 <h2>In preparation for the game development these educational videos were watched: </h2>
 <ul>
-	<li><a href=""></a></li>
-	<li><a href=""></a></li>
-	<li><a href=""></a></li>
-	<li><a href=""></a></li>
-	<li><a href=""></a></li>
+	<li><a href="https://www.youtube.com/watch?v=3uuQ3g92oPQ"></a></li>
+	<li><a href="https://www.youtube.com/watch?v=mbgbdM8Flg4"></a></li>
+	<li><a href="https://www.youtube.com/watch?v=XH49scrvSjg&t=464s"></a></li>
+	<li><a href="https://www.youtube.com/watch?v=W3eJWpvIl0g&t=399s"></a></li>
+	<li><a href="https://www.youtube.com/watch?v=MLtAMg9_Svw&t=354s"></a></li>
 </ul>
 
 <h2>To get better understanging of JS these external resources were used</h2>
 <ul>
-	<li><a href=""></a></li>
-	<li><a href=""></a></li>
-	<li><a href=""></a></li>
-	<li><a href=""></a></li>
-	<li><a href=""></a></li>
+	<li><a href="https://www.udemy.com/modern-javascript-from-novice-to-ninja/"></a></li>
+	<li><a href="https://www.udemy.com/advanced-javascript-concepts/"></a></li>
+	<li><a href="https://github.com/getify/You-Dont-Know-JS"></a></li>
 </ul>
 
 <h2>Acknowledgements</h2>
 
 <ul>
-	<li>Codebar.io coders meer-up group for supporting me on my progress in JS and general advice</li>
-	<li>FreeCodeCamp developers meet-up group for feedback on the project</li>
+	<li>Codebar.io coders meet-up group for supporting me on my progress in JS and general advice</li>
+	<li>FreeCodeCamp developers meet-up group for feedback on my work</li>
 	<li>Mentors and fellow students on slack for help around the clock regarding any coding issue</li>
-	<li>Super Thanks to Spencer Barriball for being available whenever I got stuck, helping and motivating me throughout creation of the project.</li>
+	<li>Super Thanks to Spencer Barriball for being available whenever I got stuck and needed advice.</li>
 </ul>
 
 
