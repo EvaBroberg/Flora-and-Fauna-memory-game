@@ -7,14 +7,14 @@
 
 # Project Goals
 
-Flora and Fauna is a memory game with a goal to entertain and visually appeal to the player, game is targeted for anybody who wants a fun way to spend short period of free time, suitable for children but designed for a grown up user.
+Flora and Fauna is a memory game with a goal to entertain and visually appeal to the player, the game is targeted for anybody who wants a fun way to spend a short period of free time, suitable for children but designed for a grown-up user.  
 
 <b>Players goals:</b>
 
 <ul>
-	<li>Fun way to spend time</li>
+	<li>A Fun way to spend time</li>
 	<li>Easy to understand and use</li>
-	<li>Designed to match a theme there fore visually appealing</li>
+	<li>Designed to match a theme therefore visually appealing</li>
 </ul>
 
 <h2>UX</h2>
@@ -22,27 +22,27 @@ Flora and Fauna is a memory game with a goal to entertain and visually appeal to
 <b>Why Flora and Fauna is awesome</b>
 
 <ul>
-	<li>Whole design was thought of and exsecuten on adobe photoshop before programming</li>
-	<li>Design is responsive allowing user to play on any device</li>
-	<li>Users name is displayed on the screen during game</li>
-	<li>Colour scheme, sounds and imagery was carefully selected to fit overall game theme</li>
-	<li>Colour scheme was chosen to be neutral and calming, easy to look at and not provocative, stress inducing</li>
+	<li>The whole design was thought of and executed on adobe photoshop before programming</li>
+	<li>Design is responsive allowing the user to play on any device</li>
+	<li>Users name is displayed on the screen during the game</li>
+	<li>Colour scheme, sounds, and imagery was carefully selected to fit the overall game theme</li>
+	<li>Colour scheme was chosen to be neutral and calming, easy to look at and not provocative, stress-inducing</li>
 </ul>
 
-The game was created for people of any age that are looking for a fun way to spend a bit of free time and are looking for a game that would not only be entertaining but would also stimulate the brain. While game is kid friendly and easy to understand and navigate, it's primaraly purpose was to appeal for a grown-up who needs to add some fun into their busy scedule.
+The game was created for people of any age that are looking for a fun way to spend a bit of free time and are looking for a game that would not only be entertaining but would also stimulate the brain. While game is kid-friendly and easy to understand and navigate, it's primary purpose was to appeal for a grown-up who needs to add some fun into their busy schedule.
 
-Game was designed to be responsive, intuitive and easy to use on any devices. Sounds were added to card flips to make it obvious when the match is made or card combination was wrong. Background sound was added in order to make game environment more engaging and stimulating, but the player that prefers soundless game can easily disable sound by clicking a speaker button which is displayed in the obvious place at the top of the screen and is easily recognisable as a tool for sound control.
+The game was designed to be responsive, intuitive and easy to use on any devices. Sounds were added to card flips to make it obvious when the match is made or card combination was wrong. Background sound was added in order to make the game environment more engaging and stimulating, but the player that prefers soundless game can easily disable the sound by clicking a speaker button which is displayed in the obvious place at the top of the screen and is easily recognizable as a tool for sound control.
 
-Game consists of three levels which are increasing in coplexity by adding extra cards. Each level has flora and fauna theme separated by cathegory: 1st level is Sea-creatures sub-cathegory, 2nd level bugs/insects and third plants/flowers. Cathegories were split rather than mixed to increase player's interest in game, when looking forward what awaits on the next level.
+The game consists of three levels which are increasing in complexity by adding extra cards. Each level has flora and fauna theme separated by category: 1st level is Sea-creatures sub-category, 2nd level bugs/insects and third plants/flowers. Categories were split rather than mixed to increase the player's interest in the game, when looking forward to what awaits on the next level.
 
-Once level is passed, pop up identifying the beginning of next level appears making it easy to follow progress in the game. If player has run out of given time or used up given amount of turns game over screen appears, a big and obvious button with text "Try Again" is displayed encorouging a player to start over. Once the game is won victory music is being played and "Congratulations" overlay fills the screen. Big button with words "Play again" appears similarly like in the "game over" state.
+Once level is passed, pop up identifying the beginning of next level appears making it easy to follow the progress in the game. If a player has run out of given time or used up a given amount of turns game over screen appears, a big and obvious button with the text "Try Again" is displayed encouraging a player to start over. Once the game is won victory music is being played and "Congratulations" overlay fills the screen. Big button with words "Play again" appears similarly like in the "game over" state.
 
 <h2>User stories</h2>
 
 <ul>
-	<li>As a person with a long commute to work I want something fun and engaing to make time go faster, I however prefer someting that is eye appealing and design not for children, so I don't feel embarassed if somebody on the bus is looking at my screen</li>
-	<li>As a student I sometimes need to take a break from books and do something studies-unrelated to get my mind off things and give myself a break. A short game does it, I do enjoy a brain stimulating games though, in order to beat the guilt of wasting time</li>
-	<li>As a person who doesn't like wasting time, I need an activity while I'm in the waiting rooms for appointments or in the que in the shop, a game that is easy enough yet with a little challenge makes time go faster</li>
+	<li>As a person with a long commute to work I want something fun and engaging to make time go faster, I, however, prefer something that is eye-appealing and design not for children, so I don't feel embarrassed if somebody on the bus is looking at my screen</li>
+	<li>As a student, I sometimes need to take a break from books and do something studies-unrelated to get my mind off things and give myself a break. A short game does it, I do enjoy a brain-stimulating games though, in order to beat the guilt of wasting time</li>
+	<li>As a person who doesn't like wasting time, I need an activity while I'm in the waiting rooms for appointments or in the queue in the shop, a game that is easy enough yet with a little challenge makes time go faster</li>
 </ul>
 
 <h2>Raugh wireframe mockups</h2>
@@ -65,7 +65,7 @@ Once level is passed, pop up identifying the beginning of next level appears mak
 	<li><a href="wireframes/Complete design/3.jpg" target="_blank">Third Level</a></li>
 	<li><a href="wireframes/Complete design/back.jpg" target="_blank">Closed card board</a></li>
 	<li><a href="wireframes/Complete design/nextLevel.jpg" target="_blank">Next Level</a></li>
-	<li><a href="wireframes/Complete design/lost.jpg" target="_blank">Losing</a></li>
+	<li><a href="wireframes/Complete design/lose.jpg" target="_blank">Losing</a></li>
 	<li><a href="wireframes/Complete design/win.jpg" target="_blank">Winning</a></li>
 </ul>
 
@@ -73,38 +73,38 @@ Once level is passed, pop up identifying the beginning of next level appears mak
 
 <h2>Features</h2>
 
-Game environment is fully responsive allowing user to play on any devices, desktop version fits all the visual information on the screen without scrolling allowing user to see and engage with all the game features. For mobile view 1st level cards are displayed in pairs rather than in threes in attempt to keep card size larger and avoid unecessary white space at the bottom of the screen, as the number of cards increases cards get smaller attemting to allow as many rows as needed to try ank keep all the cards visable without scrolling.
+The game environment is fully responsive allowing the user to play on any devices, desktop version fits all the visual information on the screen without scrolling allowing the user to see and engage with all the game features. For mobile view 1st level cards are displayed in pairs rather than in threes in attempt to keep card size larger and avoid unnecessary white space at the bottom of the screen, as the number of cards increases cards get smaller attempting to allow as many rows as needed to try and keep all the cards visible without scrolling.
 
-i- icon for game instructions and speaker icon is added to the Log in page allowing user to familiarise with a game and decided whether they want sound effects or not before game starts.
+i- icon for game instructions is added to the login page allowing the user to familiarise with a game.
 
-All levels of the game share same design theme (same headder displaying logo in the middle timer on the top left corner, flip count on the top right corner and a good luck message including their chosen name under the header). The only thing changing as the game progresses is the amount of cards displayed and the theme of the cards whick is divided in three categories. Log in page was created to go with an overall design using overlay of the same colour as dominant colour of the game background, same fonts and logo are also displayed. All the overlay displays such as: "You won", "game over", "next level" share exact same style and identical buttons to provide consistancy.
+All levels of the game share same design theme (the same header displaying the logo in the middle timer on the top left corner, flip count on the top right corner and a good luck message including their chosen name under the header). And a sound icon on the top right corner allowing uset to decide whether they want sound effects or not. The only thing changing as the game progresses is the number of cards displayed and the theme of the cards which is divided into three categories. Log in page was created to go with an overall design using an overlay of the same color as the dominant color of the game background, same fonts and logo are also displayed. All the overlay displays such as: "You won", "game over", "next level" share the exact same style and identical buttons to provide consistency.
 
 <h2>Log-in Page</h2>
 
-Log in page is imediately displayed once user access game, it overlays all the content displaying large logo and requiring an input of the chosen name. If name hasn't been entered modal pops up alerting that name must be provided. at the top right corner of log-in page (top middle for mobile devices) user can navigate to "i" or "speaker" icons and read game rules as well as to disable sound effects. Once user has familiarised themselves with game rules, amended sound options and chosen a name they then press the button to start the game (it is also possible to access the game by pressing enter, in order to provide convenience).
+Log in page is immediately displayed once user access game, it overlays all the content displaying the large logo and requiring an input of the chosen name. If the name hasn't been entered modal pops up alerting that name must be provided. at the top right corner of the log-in page (top middle for mobile devices) user can navigate to "i" or "speaker" icons and read game rules as well as to disable sound effects. Once the user has familiarised themselves with game rules, amended sound options and chosen a name they then press the button to start the game (it is also possible to access the game by pressing enter, in order to provide convenience).  
 
 <h2>First Level</h2>
 
-As soon as user enters the game "Good luck 'User's chosen name" is displayed on the screen and timer starts a count down from 60 and a game background music starts playing (unless user had previously disabled it). Player flips first card (every flip of the card has a sound effect), player flips a second card, on the top right flip count increases by 1. If the match is made user hears a match sound and cards stay face up, if cards didn't match no-match sound activated and cards flip back. Users get to try until they either ran out of given time or exceeded a given amount of flips per game. If the game was lost, losing sound activates and overlay anouncing lost game appears covering all content. Under thext "Sorry, you have lost" a big button with text "Try again" is displayed allowing user to reset the game. Every time user starts a new game cards are reshuffled and their position changes. If player has matched all the cards in time given and not exceeded number of flips provided overlay next level appears. It's functionality works similarly to game over overlay as it displays text and the button, the only difference being that the button will lead to a second level rather than restarting the game.
+As soon as the user enters the game "Good luck 'User's chosen name" is displayed on the screen and timer starts a count down from 60 and a game background music starts playing (unless the user had previously disabled it). The player flips the first card (every flip of the card has a sound effect), the player flips a second card, on the top right flip count increases by 1. If the match is made the user hears a matching sound and cards stay face up if cards didn't match no-match sound activated and cards flip back. Users get to try until they either ran out of given time or exceeded a given amount of flips per game. If the game was lost, losing sound activates and overlay announcing lost game appears covering all content. Under the "Sorry, you have lost" a big button with the text "Try again" is displayed allowing the user to reset the game. Every time user starts a new game card are reshuffled and their position changes. If a player has matched all the cards in the time given and not exceeded the number of flips provided overlay next level appears. Its functionality works similarly to the game over overlay as it displays text and the button, the only difference being that the button will lead to a second level rather than restarting the game. 
 
 <h2>Second Level</h2>
 
-Once user had clicked "Start next level button" all same features as level one are activated, background music, timer and flip count starts working. More cards are added to the board and the rest of the game is identical to the first level.
+Once the user had clicked "Start next level button" all same features as level one are activated, background music, timer and the flip count starts working. More cards are added to the board and the rest of the game is identical to the first level. 
 
 <h2>Third Level</h2>
 
-Exactly same as 1st and 2nd levels except even more cards are added to the board and if all cards were matched this time the game is won. "Congratulations You Won" overlay appears and victory sound is played. This overlay has same functionality as game over displaying text and a button to "Play again", only the messaging changes.
+Exactly same as 1st and 2nd levels except even more cards are added to the board and if all cards were matched this time the game is won. "Congratulations You Won" overlay appears and victory sound is played. This overlay has the same functionality as game over displaying text and a button to "Play again", only the messaging changes.  
 
 <h2>Existing features</h2>
 
 <ul>
-	<li>Log in page conists of form and a submmit button allowing player to choose the name before game starts, which is later displayed on the screen</li>
-	<li>information and sound icons are provided that grows and changes colour when hovered over, allowing user to amend sound affects and read game rules before game starts </li>
-	<li>Timer and flip count is provided throughout all levels of the game, sharing style and functionality</li>
+	<li>Log in page consists of a form and a submit button allowing the player to choose the name before the game starts, which is later displayed on the screen</li>
+	<li>information and sound icons are provided that grows and changes color when hovered over, allowing the user to amend sound effects and read game rules before the game starts</li>
+	<li>Timer and the flip count is provided throughout all levels of the game, sharing style and functionality</li>
 	<li>Users name with "good luck message" is displayed throughout all levels of the game</li>
 	<li>Set of interactive cards that shares same style properties (increasing in number by level) is provided throughout the game</li>
 	<li>"Next Level", "Game over" and "You won" overlays are activated on each level also consisting of the button encouraging user to restart a game or progress to the next level</li>
-	<li>Same footer is used throughout the game indicating copy right with a year of game creation and an github icon which grows and changes colour when hovered over and on the click leads a user to a github repository where they are able to check out the code behind the game</li>
+	<li>The same footer is used throughout the game indicating copyright with a year of game creation and a GitHub icon which grows and changes color when hovered over and on the click leads a user to a GitHub repository where they are able to check out the code behind the game</li>
 </ul>
 
 <h4>Features to improve or create</h4>
@@ -113,8 +113,8 @@ Exactly same as 1st and 2nd levels except even more cards are added to the board
 	<li>Create a registration form so that user can log in and continue their game where they left off (need to advance in JS)</li>
 	<li>Amend that once user restarts the game they don't have to log in again, their name continues being displayed on the screen(need to advance in JS)</li>
 	<li>Add more levels</li>
-	<li>Add grading system, that remembers users best score at shortest time and least amount of flips there fore it can track personal record and announce when results were improved (need to advance in JS)</li>
-	<li>Add a CSS animation for when game is won (need to advance in CSS)</li>
+	<li>Add the grading system, that remembers users best score at the shortest time and least amount of flips, therefore, it can track personal record and announce when results were improved (need to advance in JS)</li>
+	<li>Add a CSS animation for when the game is won (need to advance in CSS)</li>
 </ul>
 
 <h4>Technologies used</h4>
@@ -179,18 +179,18 @@ Take following actions in order to run this project locally:
 
 <h2>In preparation for the game development these educational videos were watched: </h2>
 <ul>
-	<li><a href="https://www.youtube.com/watch?v=3uuQ3g92oPQ"></a></li>
-	<li><a href="https://www.youtube.com/watch?v=mbgbdM8Flg4"></a></li>
-	<li><a href="https://www.youtube.com/watch?v=XH49scrvSjg&t=464s"></a></li>
-	<li><a href="https://www.youtube.com/watch?v=W3eJWpvIl0g&t=399s"></a></li>
-	<li><a href="https://www.youtube.com/watch?v=MLtAMg9_Svw&t=354s"></a></li>
+	<li><a href="https://www.youtube.com/watch?v=3uuQ3g92oPQ"></a>1</li>
+	<li><a href="https://www.youtube.com/watch?v=mbgbdM8Flg4"></a>2</li>
+	<li><a href="https://www.youtube.com/watch?v=XH49scrvSjg&t=464s">3</a></li>
+	<li><a href="https://www.youtube.com/watch?v=W3eJWpvIl0g&t=399s">4</a></li>
+	<li><a href="https://www.youtube.com/watch?v=MLtAMg9_Svw&t=354s">5</a></li>
 </ul>
 
 <h2>To get better understanging of JS these external resources were used</h2>
 <ul>
-	<li><a href="https://www.udemy.com/modern-javascript-from-novice-to-ninja/"></a></li>
-	<li><a href="https://www.udemy.com/advanced-javascript-concepts/"></a></li>
-	<li><a href="https://github.com/getify/You-Dont-Know-JS"></a></li>
+	<li><a href="https://www.udemy.com/modern-javascript-from-novice-to-ninja/">1</a></li>
+	<li><a href="https://www.udemy.com/advanced-javascript-concepts/">2</a></li>
+	<li><a href="https://github.com/getify/You-Dont-Know-JS"></a>3</li>
 </ul>
 
 <h2>Acknowledgements</h2>
@@ -205,4 +205,4 @@ Take following actions in order to run this project locally:
 
 <h2>Disclaimer</h2>
 
-Game was created for educational purpouses only and is not available for profit. I do not hold copy rights of imagery or sound effects.
+The game was created for educational purposes only and is not available for profit. I do not hold copy rights of imagery or sound effects.  
