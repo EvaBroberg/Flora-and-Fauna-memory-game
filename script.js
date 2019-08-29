@@ -26,6 +26,7 @@ bgMusic.volume = 0.05;
 soundForCardsMatch.volume = 0.3;
 soundForNoMatchingCard.volume = 0.3;
 soundForCardFlip.volume = 0.3;
+bgMusic.loop = true;
 
     document.getElementById("info").addEventListener("click", function(){
         document.getElementById("rules").style.display = "block";
@@ -35,13 +36,14 @@ soundForCardFlip.volume = 0.3;
         document.getElementById("rules").style.display = "none";
     })
 
-    document.getElementById("iconYes").addEventListener("click", function(){
+
+    document.getElementById("iconYes").addEventListener("click", function off(){
         document.getElementById("iconYes").style.display = "none";
         document.getElementById("iconNo").style.display = "inline";
         bgMusic.volume = 0;
       });
 
-      document.getElementById("iconNo").addEventListener("click", function(){
+      document.getElementById("iconNo").addEventListener("click", function on(){
         document.getElementById("iconNo").style.display = "none";
         document.getElementById("iconYes").style.display = "inline";
         bgMusic.volume = 0.1;
@@ -121,10 +123,8 @@ function levels(){
     if(score === 10 || score === 28) {
         document.getElementById("nextLevel").style.display = "block";
         clearInterval(timer);
-        bgMusic.volume = 0;
         playBtn.addEventListener('click', () => {
-            document.getElementById("nextLevel").style.display = "none";
-            bgMusic.volume = 0.1;
+            document.getElementById("nextLevel").style.display = "none";    
         });
     } 
     if (score === 10){
@@ -154,6 +154,7 @@ function turning() {
     
     else{
         document.getElementById("gameover").style.display = "block";
+        bgMusic.volume = 0;
     }
 
     document.getElementById('turns').innerText = 'Turns: ' + turns;
@@ -201,6 +202,7 @@ function countDown(i, callback) {
 $("#modalBtn").on("click", function(){
     countDown(60, function(){
         document.getElementById("gameover").style.display = "block";
+        bgMusic.volume = 0;
     });
 });
 
