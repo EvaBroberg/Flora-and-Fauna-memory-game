@@ -17,6 +17,7 @@ const soundForCardsMatch = new Audio('sounds/match.mp3');
 const soundForNoMatchingCard = new Audio('sounds/no-match.wav');
 let bgMusic = new Audio('sounds/bg.mp3');
 let losingSound = new Audio('sounds/lost.wav');
+let winningSound = new Audio('sounds/win.wav');
 let nextLevel = document.getElementById('newLevel');
 let playBtn = document.getElementById('play');
 let display = document.getElementById("time-remaining").textContent;
@@ -144,6 +145,8 @@ function levels(){
         turns = 0;
         document.getElementById("game3").style.display = "none";
         document.getElementById("youWon").style.display = "block";
+        bgMusic.volume = 0;
+        winningSound.play();
     }
 }
 
