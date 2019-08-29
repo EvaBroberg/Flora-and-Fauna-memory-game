@@ -57,6 +57,8 @@ function openModal(){
     closeBtn.addEventListener('click', closeModal);
     window.addEventListener('click', closeOutside);
     modal.style.display = 'block';
+    clearInterval(timer);
+    bgMusic.pause();
 }
 function closeModal(){
     modal.style.display = 'none';

@@ -45,17 +45,31 @@ Once level is passed, pop up identifying the beginning of next level appears mak
 	<li>As a person who doesn't like wasting time, I need an activity while I'm in the waiting rooms for appointments or in the que in the shop, a game that is easy enough yet with a little challenge makes time go faster</li>
 </ul>
 
-<h2>Wireframe mockups</h2>
+<h2>Raugh wireframe mockups</h2>
 
 <ul>
 	<li><a href="wireframes/login.jpg" target="_blank">Log-in page</a></li>
 	<li><a href="wireframes/1.jpg" target="_blank">First Level</a></li>
 	<li><a href="wireframes/2.jpg" target="_blank">Second Level</a></li>
 	<li><a href="wireframes/3.jpg" target="_blank">Third Level</a></li>
-	<li><a href="wireframes/4.jpg" target="_blank">Lost Page</a></li>
-	<li><a href="wireframes/5.jpg" target="_blank">Win Page</a></li>
-	<li><a href="wireframes/6.jpg" target="_blank">next Level overlay</a></li>
+	<li><a href="wireframes/rules.jpg" target="_blank">Lost Page</a></li>
+	<li><a href="wireframes/win.jpg" target="_blank">Win Page</a></li>
 </ul>
+
+<h2>Final Wireframe mockups</h2>
+
+<ul>
+	<li><a href="wireframes/Complete design/login.jpg" target="_blank">Log-in page</a></li>
+	<li><a href="wireframes/Complete design/1.jpg" target="_blank">First Level</a></li>
+	<li><a href="wireframes/Complete design/2.jpg" target="_blank">Second Level</a></li>
+	<li><a href="wireframes/Complete design/3.jpg" target="_blank">Third Level</a></li>
+	<li><a href="wireframes/Complete design/back.jpg" target="_blank">Closed card board</a></li>
+	<li><a href="wireframes/Complete design/nextLevel.jpg" target="_blank">Next Level</a></li>
+	<li><a href="wireframes/Complete design/lost.jpg" target="_blank">Losing</a></li>
+	<li><a href="wireframes/Complete design/win.jpg" target="_blank">Winning</a></li>
+</ul>
+
+
 
 <h2>Features</h2>
 
@@ -106,6 +120,7 @@ Exactly same as 1st and 2nd levels except even more cards are added to the board
 <h4>Technologies used</h4>
 
 <ul>
+	<li>Adobe Photoshop was used to create frameworks, cards, logos and icons</li>
 	<li>Game was built using HTML, CSS, vanilla JavaScript and JQueries</li>
 	<li>Code editor Visual Studio Code was used as a development environment</li>
 	<li>Google Fonts were used with text styling purposes</li>
