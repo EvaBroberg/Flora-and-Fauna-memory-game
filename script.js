@@ -16,6 +16,7 @@ const soundForCardFlip = new Audio('sounds/card-flip.wav');
 const soundForCardsMatch = new Audio('sounds/match.mp3');
 const soundForNoMatchingCard = new Audio('sounds/no-match.wav');
 let bgMusic = new Audio('sounds/bg.mp3');
+let losingSound = new Audio('sounds/lost.wav');
 let nextLevel = document.getElementById('newLevel');
 let playBtn = document.getElementById('play');
 let display = document.getElementById("time-remaining").textContent;
@@ -155,6 +156,7 @@ function turning() {
     else{
         document.getElementById("gameover").style.display = "block";
         bgMusic.volume = 0;
+        losingSound.play();
     }
 
     document.getElementById('turns').innerText = 'Turns: ' + turns;
@@ -203,6 +205,7 @@ $("#modalBtn").on("click", function(){
     countDown(60, function(){
         document.getElementById("gameover").style.display = "block";
         bgMusic.volume = 0;
+        losingSound.play();
     });
 });
 
