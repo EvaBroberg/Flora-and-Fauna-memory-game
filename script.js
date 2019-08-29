@@ -22,7 +22,6 @@ let display = document.getElementById("time-remaining").textContent;
 let timeLimit = 60;
 let interval;
 
-
 bgMusic.volume = 0.05;
 soundForCardsMatch.volume = 0.3;
 soundForNoMatchingCard.volume = 0.3;
@@ -48,10 +47,6 @@ soundForCardFlip.volume = 0.3;
         bgMusic.volume = 0.1;
       });
 
-  
-
-
-
 function openModal(){
     closeBtn.addEventListener('click', closeModal);
     window.addEventListener('click', closeOutside);
@@ -69,8 +64,7 @@ startGame.addEventListener('click', hide);
 login.addEventListener('submit', e => {
     bgMusic.play();
     e.preventDefault();
-    hide(); 
-     
+    hide();    
 });
 
 
@@ -81,6 +75,7 @@ function hide(){
         document.getElementById('player').innerHTML = 'Good luck ' + username + '!';
     }else{
         openModal();
+        clearInterval(timer);
     };
 }
 
@@ -125,11 +120,11 @@ function disableCards() {
 function levels(){
     if(score === 10 || score === 28) {
         document.getElementById("nextLevel").style.display = "block";
+        clearInterval(timer);
         bgMusic.volume = 0;
         playBtn.addEventListener('click', () => {
             document.getElementById("nextLevel").style.display = "none";
             bgMusic.volume = 0.1;
-            startCountDown();
         });
     } 
     if (score === 10){
@@ -163,8 +158,6 @@ function turning() {
 
     document.getElementById('turns').innerText = 'Turns: ' + turns;
     lockBoard = true;
-
-    console.log(turns);
 }
 
 
@@ -193,48 +186,32 @@ function resetBoard() {
 cards.forEach(card => card.addEventListener('click', flipCard));
 
 
-//TIMER needs testing
-var duration;
-var timer = duration, seconds;
-var intervalId = setInterval(timer, 10000);
-clearInterval(intervalId);
-var existingIntervalId = 0;
+//TIMER
 
+let timer;
 
-function startTimer(duration, display) {
-   
-    setInterval(function () {
-        seconds = parseInt(timer);
-  
-        seconds = seconds < 10 ? + seconds : seconds;
-        display = document.querySelector('#time-remaining');
-        
-        display.textContent = 'Time: ' + seconds;
-  
-        if (--timer < 0) {
-            document.getElementById("gameover").style.display = "block";
-        }  
-
-        
-
+function countDown(i, callback) {
+    timer = setInterval(function() {
+        document.getElementById("time-remaining").innerHTML = "Time: " + i;
+        i-- || (clearInterval(timer), callback());
     }, 1000);
-  }
+}
 
 
+$("#modalBtn").on("click", function(){
+    countDown(60, function(){
+        document.getElementById("gameover").style.display = "block";
+    });
+});
 
 
-
-
-
-
-//   startTimer(timeLimit, display);
-  
-//   window.onload = function () {
-//     var timeLimit = 60,
-//         display = document.querySelector('#time-remaining');
-//     startTimer(timeLimit, display);
-//   };
-
+$("#play").click(function(){
+    // clearInterval(timer);
+    document.getElementById("time-remaining").innerHTML = "Time: " + 100;
+    countDown(99, function(){
+        document.getElementById("gameover").style.display = "block";
+    });
+});
 
 
 //losing

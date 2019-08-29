@@ -78,14 +78,10 @@ body{
 }
 /* Icons */
 
-.icons {
-    float: right;
-    padding: 10px 20px;
-}
-
 .icon{
     width: 25px;
-    padding: 2px;
+    float: right;
+    padding: 10px 20px;
 }
 
 #iconNo{
@@ -699,7 +695,6 @@ body{
 
         .icon {
             width: 37px;
-            padding: 3px;
         }
         
         
