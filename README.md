@@ -172,15 +172,15 @@ Take following actions in order to run this project locally:
 
 <ul>
 	<li>Images used for cards and logo were taken fron free source vintage botanical imagery collection at <a href="https://www.flickr.com/photos/biodivlibrary/albums/">Flickr</a></li>
-	<li>Sounds for the game were taken from a <a href="https://freesound.org/"></a>free sound library</li>
+	<li>Sounds for the game were taken from a <a href="https://freesound.org/">free sound library</a></li>
 </ul>
 
 <h4>Code</h4>
 
 <h2>In preparation for the game development these educational videos were watched: </h2>
 <ul>
-	<li><a href="https://www.youtube.com/watch?v=3uuQ3g92oPQ"></a>1</li>
-	<li><a href="https://www.youtube.com/watch?v=mbgbdM8Flg4"></a>2</li>
+	<li><a href="https://www.youtube.com/watch?v=3uuQ3g92oPQ">1</a></li>
+	<li><a href="https://www.youtube.com/watch?v=mbgbdM8Flg4">2</a></li>
 	<li><a href="https://www.youtube.com/watch?v=XH49scrvSjg&t=464s">3</a></li>
 	<li><a href="https://www.youtube.com/watch?v=W3eJWpvIl0g&t=399s">4</a></li>
 	<li><a href="https://www.youtube.com/watch?v=MLtAMg9_Svw&t=354s">5</a></li>
@@ -190,7 +190,7 @@ Take following actions in order to run this project locally:
 <ul>
 	<li><a href="https://www.udemy.com/modern-javascript-from-novice-to-ninja/">1</a></li>
 	<li><a href="https://www.udemy.com/advanced-javascript-concepts/">2</a></li>
-	<li><a href="https://github.com/getify/You-Dont-Know-JS"></a>3</li>
+	<li><a href="https://github.com/getify/You-Dont-Know-JS">3</a></li>
 </ul>
 
 <h2>Acknowledgements</h2>
@@ -199,7 +199,7 @@ Take following actions in order to run this project locally:
 	<li>Codebar.io coders meet-up group for supporting me on my progress in JS and general advice</li>
 	<li>FreeCodeCamp developers meet-up group for feedback on my work</li>
 	<li>Mentors and fellow students on slack for help around the clock regarding any coding issue</li>
-	<li>Super Thanks to Spencer Barriball for being available whenever I got stuck and needed advice.</li>
+	<li>Thanks to Spencer Barriball for being available whenever I got stuck and needed advice.</li>
 </ul>
 
 
