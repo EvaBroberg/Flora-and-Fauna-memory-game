@@ -514,11 +514,16 @@ body{
     height: 100%;
     position: absolute;
     backface-visibility: hidden;
-} 
+    -webkit-backface-visibility: hidden;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+}
 
 .front {
     transform: rotateY(180deg);
 }
+
+
 
 
 /* FOOTER */
